@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech</title>
+    <link rel="stylesheet" href="css/styleproduct.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
+  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
+
+   
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Nav links -->
+  <div class="nav-links" id="navLinks">
+    <a class="active" href="TV.html">TV</a>
+    <a href="Frigorifer.html">Frigorifer</a>
+    <a href="frizat.html">Friz</a>
+    <a href="lavatriqe.html">Lavatriçe</a>
+    <a href="enelarese.html">Enëlarëse</a>
+    <a href="Shporetelektrik.html">Shporet elektrik</a>
+    <a href="thithese.html">Thithëse elektrike</a>
+    <a href="mikroval.html">Mikrovalë</a>
+    <a href="bojler.html">Bojler</a>
+    <a href="klima.html">Klima</a>
+    <a href="telefon.html">Telefon/Tablet</a>
+    <a href="trotinet.html">Trotinet Elektrik</a>
+    <a href="kositese.html">Kositese</a>
+    
+  </div>
+</nav>
+
+    <div class="product-detail">
+  <div class="product-image">
+    <img src="images/tv50.avif" alt="TV Image">
+  </div>
+  <div class="product-info">
+    <h2>TELEVIZOR SASMUNG LED UE65CU7092U</h2>
+    <ul>
+  <li>Rezolucioni: 4K LED</li>
+  <li>Madhësia e ekranit: 65 inç</li>
+  <li>Garancioni: 5Vite</li>
+   <li>Barkodi:8806095312811</li>
+  <li>Cmimi: <span class="price">€695.00</span></li>
+</ul>
+    <!-- <a href="#" class="buy-btn">Buy Now</a> -->
+  </div>
+</div>
+<!-- FOOTER -->
+  <footer>
+    ©SharriTech.
+  </footer>
+
+
+
+
+
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+
+    navLinks.classList.toggle("show");
+
+    // Toggle icon
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  }
+</script>
+</body>
+</html>
