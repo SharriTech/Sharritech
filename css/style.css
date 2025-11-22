@@ -121,7 +121,7 @@ footer {
       }
 
       .products {
-        padding: 40px 20px;
+        padding: 40px 15px;
       }
 
       .product-grid {
@@ -218,7 +218,7 @@ del{
 }
 
 .product {
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #000;
   border-radius: 6px;
   background-color: #f5f5f5;
