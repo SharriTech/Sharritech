@@ -164,7 +164,7 @@ footer {
 /* PRODUCT DETAIL — VERSION E ZVOGËLUAR */
 .product-detail {
     display: flex;
-    gap: 25px;
+    gap: 35px;
     max-width: 750px;
     margin: 30px auto;
     background: #fff;
@@ -176,7 +176,7 @@ footer {
 }
 
 .product-image img {
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     object-fit: contain;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -230,7 +230,7 @@ footer {
     }
 
     .product-image img {
-        width: 85%;
+        width: 95%;
         max-width: 260px;
     }
 
