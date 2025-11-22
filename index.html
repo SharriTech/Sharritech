@@ -19,6 +19,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
+      margin: 10px;
       
     }
     nav a{
@@ -56,56 +57,70 @@
     }
 
     /* HERO SECTION */
-    .hero {
-  background-image: url('images/logo4.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  /* text-align: center; */
-  min-height: calc(60vh - 70px); /* Adjust this based on navbar height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px 20px;
-  background-attachment: fixed;
+   /* HERO */
+.hero {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 20px;
+  margin: 10px;
+  background-color: white;
+}
+
+.hero-text {
+  width: 55%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text h2 {
+  font-size: 3.2rem;
+  color: black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.hero-text h3 {
+  font-size: 1.8rem;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero h2{
-      font-size: 3.2rem;
-      color: white;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    .hero h3{
-      font-size: 1.8rem;
-    }
-    .hero span{
-      color: red;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
+.hero-text span {
+  color: red;
+}
 
-    .hero a {
-      padding: 12px 25px;
-      background-color: #6EC8CB;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      border: 2px solid black;
-      text-align: center;
-      width: 45%;
-      font-size: 18px;
-    }
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
 
+.hero-text a {
+  padding: 12px 25px;
+  background-color: #0096FF;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+  width: 45%;
+  font-size: 18px;
+}
+
+.hero-tv {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-tv img {
+  width: 260px;
+  height: auto;
+  display: block;
+}
 
     /* PRODUKTET */
     .products {
@@ -206,6 +221,21 @@
   .hero a {
     font-size: 0.9rem;
     padding: 10px 20px;
+  }
+.hero {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 15px;
+    background-color: lightblue;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-img img,
+  .hero-tv img {
+    display: none;
   }
 
   .products {
@@ -319,12 +349,16 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-text">
     <a href="kontakti.html">Na Vizito</a>
     <h1>Zgjedh Teknikën e Shtëpisë tënde</h1>
     <p>Frigoriferë, Lavatriçe, Furrat dhe më shumë – me çmimet më të mira</p>
     <h3>MUNDËSI PAGESE ME KËSTE PËR 3, 6 DHE 12 MUAJ</h3>
     <h2>ZBRITJE <span>-5%</span></h2>
-    
+  </div>
+     <div class="hero-img">
+    <img src="images/televizori.png" alt="">
+  </div>
   </section>
 
   <!-- PRODUKTET -->
