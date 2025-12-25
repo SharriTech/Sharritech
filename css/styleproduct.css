@@ -246,3 +246,6 @@ footer {
         font-size: 1.1rem;
     }
 }
+#notinstock{
+  color: red;
+}

@@ -246,3 +246,6 @@ del{
     height: 150px;
   }
 }
+#notinstock{
+  color: red;
+}
