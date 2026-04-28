@@ -1,75 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-   <link rel="stylesheet" href="css/styleproduct.css">
+    <title>Samsung Galaxy Tab A9 - SharriTech</title>
+    <link rel="stylesheet" href="css/styleproduct.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="logo">Sharri<span>Tech</span></a>
+        <div class="nav-links">
+            <a href="index.html">Kryefaqja</a>
+            <a href="TV.html">TV</a>
+            <a href="Frigorifer.html">Frigorifer</a>
+            <a href="frizat.html">Friz</a>
+            <a href="lavatriqe.html">Lavatriçe</a>
+            <a href="enelarese.html">Enëlarëse</a>
+            <a href="Shporetelektrik.html">Shporet</a>
+            <a href="thithese.html">Thithëse</a>
+            <a href="bojler.html">Bojler</a>
+            <a href="klima.html">Klima</a>
+            <a href="telefon.html">Telefon</a>
+            <a href="tablet.html" class="active">Tablet</a>
+            <a href="trotinet.html">Trotinet</a>
+        </div>
+    </nav>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a class="active" href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
-</nav>
     <div class="product-detail">
-  <div class="product-image">
-    <img src="images/tablet1.png" alt="TV Image">
-  </div>
-  <div class="product-info">
-    <h2>TABLET GALAXY A7 LITE T200 3/32 GRAY</h2>
-    <ul>
-  
-  
-  <li>Garancioni: 2Vite</li>
-  <li>Barkodi:8806092224704</li>
-  <li>Cmimi: <span class="price">€145.00</span></li>
-</ul>
-    <!-- <a href="#" class="buy-btn">Buy Now</a> -->
-  </div>
-</div>
+        <div class="product-image">
+            <img src="tablet1.jpg" alt="Samsung Galaxy Tab A9">
+        </div>
+        <div class="product-info">
+            <h2>Samsung Galaxy Tab A9</h2>
+            <ul>
+                <li>Ekrani: 8.7 inch TFT</li><li>Procesori: MediaTek Helio G99</li><li>RAM: 4GB</li><li>Storage: 64GB</li><li>Bateria: 5100mAh</li><li>Garancioni: 2 Vite</li>
+            </ul>
+            <span class="price">€299.00</span>
+        </div>
+    </div>
 
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-
-
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+    <footer>©SharriTech.</footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

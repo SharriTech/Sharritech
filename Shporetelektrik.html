@@ -1,272 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Shporet - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="shporet1.html">
-      <div class="product">
-        <img src="images/shporet1.jpg" alt="">
-        <h3>SHPORET ELEKTRIK INDESIT I6VSH(W)/KZ</h3>
-        <p>€365.00</p>
-      </div>
-    </a>
-    <a href="shporet2.html">
-      <div class="product">
-        <img src="images/shporet2.webp" alt="">
-        <h3>SHPORET ELEKTRKIK DELON VS66DS</h3>
-        <p>€299.00</p>
-      </div>
-    </a>
-    <a href="shporet3.html">
-      <div class="product">
-        <img src="images/shporet3.png" alt="">
-        <h3>SHPORET ELEKTRIK VIVAX FC-04602WH</h3>
-        <p>€220.00</p>
-      </div>
-    </a>
-    <!-- <a href="shporet4.html">
-      <div class="product">
-        <img src="images/shporet4.png" alt="">
-        <h3>SHPORET ELEKTRIK VOX CTR6305IX</h3>
-        <p>€379.00</p>
-      </div>
-    </a> -->
-    <a href="shporet5.html">
-      <div class="product">
-        <img src="images/shporet5.jpg" alt="">
-        <h3>SHPORET ELEKTRIK HOTPOINT/ARISTON H6VMH6AX/GR</h3>
-        <p>€422.00</p>
-      </div>
-    </a>
-    </div>
-  </section>
-<div class="furra">
-    <h2>FURRAT MONTUESE</h2>
+<div class="container">
+    <h1 class="page-title">Shporet</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="shporet1.html">
+                <img src="shporet1.jpg" alt="SHPORET ELEKTRIK INDESIT I6VSH(W)/KZ" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">SHPORET ELEKTRIK INDESIT I6VSH(W)/KZ</h3>
+                    <span class="card-price">€365.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="shporet2.html">
+                <img src="shporet2.webp" alt="SHPORET ELEKTRKIK DELON VS66DS" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">SHPORET ELEKTRKIK DELON VS66DS</h3>
+                    <span class="card-price">€299.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="shporet3.html">
+                <img src="shporet3.png" alt="SHPORET ELEKTRIK VIVAX FC-04602WH" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">SHPORET ELEKTRIK VIVAX FC-04602WH</h3>
+                    <span class="card-price">€220.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="shporet5.html">
+                <img src="shporet5.jpg" alt="SHPORET ELEKTRIK HOTPOINT/ARISTON H6VMH6AX/GR" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">SHPORET ELEKTRIK HOTPOINT/ARISTON H6VMH6AX/GR</h3>
+                    <span class="card-price">€422.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
 </div>
-  <section class="products">
-    <div class="product-grid">
-    <a href="furra1.html">
-      <div class="product">
-        <img src="images/furra1.jpg" alt="">
-        <h3>FURRË MONTUESE ELEKTROLUX EOF3H50BK944068231</h3>
-        <p>€295.00</p>
-      </div>
-    </a>
-    <a href="furra2.html">
-      <div class="product">
-        <img src="images/furra2.png" alt="">
-        <h3>FURRË MONTUESE ELETROLUX EZB3430AOK</h3>
-        <p>€269.00</p>
-      </div>
-    </a>
-    <a href="furra3.html">
-      <div class="product">
-        <img src="images/furra3.png" alt="">
-        <h3>FURRË MONTUESE VIVAX BO-624MHX</h3>
-        <p>€159.00</p>
-      </div>
-    </a>
-    <a href="furra4.html">
-      <div class="product">
-        <img src="images/furra4.png" alt="">
-        <h3>FURRË MONTUESE DELON MD180M</h3>
-        <p>€205.00</p>
-      </div>
-    </a>
-    <a href="furra5.html">
-      <div class="product">
-        <img src="images/furra5.png" alt="">
-        <h3>FURRË MONTUESE DELON CKBIOI60M</h3>
-        <p>€170.00</p>
-      </div>
-    </a>
-    <a href="furra6.html">
-      <div class="product">
-        <img src="images/furra6.png" alt="">
-        <h3>FURRË MONTUESE DELON DL-190M</h3>
-        <p>€168.00</p>
-      </div>
-    </a>
-    <a href="furra7.html">
-      <div class="product">
-        <img src="images/furra7.avif" alt="">
-        <h3>FURRË MONTUESE BASHKË ME PLLAKË VOX SET 2111401</h3>
-        <p>€395.00</p>
-      </div>
-    </a>
-    <a href="furra8.html">
-      <div class="product">
-        <img src="images/furra8.png" alt="">
-        <h3>FURRË MONTUESE VOX EBB2121IX XL</h3>
-        <p>€259.00</p>
-      </div>
-    </a>
-    <a href="furra9.html">
-      <div class="product">
-        <img src="images/furra9.jpg" alt="">
-        <h3>FURRË MONTUESE INDESIT IO 235H B</h3>
-        <p>€250.00</p>
-      </div>
-    </a>
-    <a href="furra10.html">
-      <div class="product">
-        <img src="images/furra10.png" alt="">
-        <h3>FURRË MONTUESE VIVAX BO-658FXHTD X</h3>
-        <p>€230.00</p>
-      </div>
-    </a>
-    <a href="furra11.html">
-      <div class="product">
-        <img src="images/furra11.png" alt="">
-        <h3>FURRË MONTUESE ELETROLUX</h3>
-        <p>€210.00</p>
-      </div>
-    </a>
-    <a href="furra12.html">
-      <div class="product">
-        <img src="images/furra12.webp" alt="">
-        <h3>FURRË MONTUESE VIVAX BO-606FAHTM X</h3>
-        <p>€250.00</p>
-      </div>
-    </a>
-    <a href="furra13.html">
-      <div class="product">
-        <img src="images/furra12.webp" alt="">
-        <h3>FURRË MONTUESE CANDY FET629XL</h3>
-        <p>€250.00</p>
-      </div>
-    </a>
-    <a href="furra14.html">
-      <div class="product">
-        <img src="images/furra14.png" alt="">
-        <h3>FURRË MONTUESE VIVAX BO-658FXHTD X</h3>
-        <p>€230.00</p>
-      </div>
-    </a>
-    <a href="furra15.html">
-      <div class="product">
-        <img src="images/" alt="">
-        <h3>FURRË MONTUESE </h3>
-        <p>€.00</p>
-      </div>
-    </a>
-    <a href="furra16.html">
-      <div class="product">
-        <img src="images/" alt="">
-        <h3>FURRË MONTUESE </h3>
-        <p>€.00</p>
-      </div>
-    </a>
-    </div>
-  </section>
-  <div class="furra">
-    <h2>PLLAKA MONTUESE</h2>
-</div>
-<section class="products">
-    <div class="product-grid">
-    <a href="pllaka1.html">
-      <div class="product">
-        <img src="images/pllaka1.jpg" alt="">
-        <h3>PLLAKË MONTUESE VIVAX</h3>
-        <p>€250.00</p>
-      </div>
-    </a>
-    <a href="pllaka2.html">
-      <div class="product">
-        <img src="images/pllaka2.png" alt="">
-        <h3>PLLAKË MONTUESE VOX</h3>
-        <p>€200.00</p>
-      </div>
-    </a>
-    <a href="pllaka3.html">
-      <div class="product">
-        <img src="images/pllaka3.png" alt="">
-        <h3>PLLAKË MONTUESE VIVAX BUILT IN</h3>
-        <p>€175.00</p>
-      </div>
-    </a>
-    <a href="pllaka4.html">
-      <div class="product">
-        <img src="images/pllaka4.png" alt="">
-        <h3>PLLAKË MONTUESE ELETROLUX EHF6241FOK</h3>
-        <p>€249.00</p>
-      </div>
-    </a>
-
-</div>
-  </section>
-  <div class="furra">
-    <h2>ASPIRATOR</h2>
-</div>
-<section class="products">
-    <div class="product-grid">
-    <a href="aspirator1.html">
-      <div class="product">
-        <img src="images/aspirator1.avif" alt="">
-        <h3>ASPIRATOR ELETROLUX LFP32</h3>
-        <p>€156.00</p>
-      </div>
-    </a>
-    <a href="aspirator2.html">
-      <div class="product">
-        <img src="images/aspirator2.avif" alt="">
-        <h3>ASPIRATOR DELON DL-2191</h3>
-        <p>€55.00</p>
-      </div>
-    </a>
-    
-
-</div>
-  </section>
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

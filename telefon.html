@@ -1,155 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Telefon - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a class="active" href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="telefon1.html">
-      <div class="product">
-        <img src="images/telefon1.jpg" alt="">
-        <h3>TELEFON SAMSUNG GALAXY A23 5G 64GB</h3>
-        <p>€280.00</p>
-      </div>
-    </a>
-    <a href="telefon2.html">
-      <div class="product">
-        <img src="images/telefon2.png" alt="">
-        <h3>TELEFON SAMSUNG GALAXY A35 5G 128GB</h3>
-        <p>€345.00</p>
-      </div>
-    </a>
-    <a href="telefon3.html">
-      <div class="product">
-        <img src="images/telefon3.jpg" alt="">
-        <h3>TELEFON SAMSUNG GALAXY A25 5G 128GB</h3>
-        <p>€330.00</p>
-      </div>
-    </a>
-    <a href="telefon4.html">
-      <div class="product">
-        <img src="images/telefon4.png" alt="">
-        <h3>TELEFON SAMSUNG GALAXY A34</h3>
-        <p>€330.00</p>
-      </div>
-    </a>
-    </div>
-  </section>
-  <div class="furra">
-    <h2>Tablet</h2>
-  </div>
-  <section class="products">
-    <div class="product-grid">
-    <a href="tablet1.html">
-      <div class="product">
-        <img src="images/tablet1.png" alt="">
-        <h3>TABLET GALAXY A7 LITE T200 3/32 GRAY</h3>
-        <p>€145.00</p>
-      </div>
-    </a>
-    <a href="tablet2.html">
-      <div class="product">
-        <img src="images/tablet2.jpg" alt="">
-        <h3>TABLET SAMSUNG GALAXY A9 </h3>
-        <p>€220.00</p>
-      </div>
-    </a>
-    <a href="tablet3.html">
-      <div class="product">
-        <img src="images/tablet3.jpg" alt="">
-        <h3>TABLET SAMSUNG A8 X200 4/46</h3>
-        <p>€229.00</p>
-      </div>
-    </a>
-
-    </div>
-  </section>
-  <div class="furra">
-    <h2>Smart Watch</h2>
-  </div>
-  <section class="products">
-    <div class="product-grid">
-    <a href="smartwatch1.html">
-      <div class="product">
-        <img src="images/smartwatch1.png" alt="">
-        <h3>VIVAX SMART WATCH LITE PRO2</h3>
-        <p>€38.49</p>
-      </div>
-    </a>
-    <a href="smartwatch2.html">
-      <div class="product">
-        <img src="images/smartwatch2.png" alt="">
-        <h3>VIVAX SMART WATCH LIFE FIT3</h3>
-        <p>€33.00</p>
-      </div>
-    </a>
-    
-
-    </div>
-  </section>
-  <!-- <div>
-    <h2>KUFJE</h2>
-  </div> -->
-  <!-- <section class="products">
-    <div class="product-grid">
-    <a href="kufje1.html">
-      <div class="product">
-        <img src="images/" alt="">
-        <h3>KUFJE TWS</h3>
-        <p>€35.00</p>
-      </div>
-   </a> -->
-    
-
-    </div>
-  </section>
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+<div class="container">
+    <h1 class="page-title">Telefon</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="telefon1.html">
+                <img src="telefon1.jpg" alt="TELEFON SAMSUNG GALAXY A23 5G 64GB" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEFON SAMSUNG GALAXY A23 5G 64GB</h3>
+                    <span class="card-price">€280.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="telefon2.html">
+                <img src="telefon2.png" alt="TELEFON SAMSUNG GALAXY A35 5G 128GB" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEFON SAMSUNG GALAXY A35 5G 128GB</h3>
+                    <span class="card-price">€345.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="telefon3.html">
+                <img src="telefon3.jpg" alt="TELEFON SAMSUNG GALAXY A25 5G 128GB" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEFON SAMSUNG GALAXY A25 5G 128GB</h3>
+                    <span class="card-price">€330.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="telefon4.html">
+                <img src="telefon4.png" alt="TELEFON SAMSUNG GALAXY A34" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEFON SAMSUNG GALAXY A34</h3>
+                    <span class="card-price">€330.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,441 +1,503 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>TV - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a class="active" href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="tv1.html">
-    
-      <div class="product">
-        <img src="images/ledtv1.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE65AU7022K|65" LED 4K</h3>
-        <p>€699.00</p>
-      </div>
-    </a>
-    <a href="tv2.html">
-      <div class="product">
-        <img src="images/philipstv2.png" alt="TV">
-        <h3>TELEVIZOR PHILIPS LED 50PUS8009/12</h3>
-        <p>€439.99</p>
-      </div>
-      </a>
-      <a href="tv3.html">
-      <div class="product">
-        <img src="images/lgudhtv3.jpg" alt="TV">
-        <h3>TELEVIZOR LG UHD 43NANO753QC</h3>
-        <p>€435.99</p>
-      </div>
-      </a>
-      <a href="tv4.html">
-      <div class="product">
-        <img src="images/lgudhtv4.jpg" alt="TV">
-        <h3>TELEVIZOR LG UHD 60UQB1003LB</h3>
-        <p>€710.00</p>
-      </div>
-      </a>
-      <a href="tv5.html">
-      <div class="product">
-        <img src="images/tv5.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG LED TV50TU7022KXXH</h3>
-        <p>€429.00</p>
-      </div>
-      </a>
-      <a href="tv6.html">
-      <div class="product">
-        <img src="images/tv6.jpg" alt="TV">
-        <h3>TELEVIZOR VOX LED 43ADW-D1B</h3>
-        <del>€399.00</del><p>€365.00</p>
-      </div>
-      </a>
-      <a href="tv7.html">
-      <div class="product">
-        <img src="images/tv7.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG QE50Q60AAU</h3>
-        <p>€530.00</p>
-      </div>
-      </a>
-      <a href="tv8.html">
-      <div class="product">
-        <img src="images/tv8.jpg" alt="TV">
-        <h3>TELEVZIOR SAMSUNG UE50AU7172DU</h3>
-        <p>€500.00</p>
-      </div>
-      </a>
-      <a href="tv9.html">
-      <div class="product">
-        <img src="images/tv9.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE50TU7022K</h3>
-        <p>€429.00</p>
-      </div>
-      </a>
-      <a href="tv10.html">
-      <div class="product">
-        <img src="images/tv10.jpg" alt="TV">
-        <h3>TELEVIZOR PHILIPS 50PUS7805/12</h3>
-        <p>€399.00</p>
-      </div>
-      </a>
-      <a href="tv11.html">
-      <div class="product">
-        <img src="images/tv11.jpg" alt="TV">
-        <h3>TELEVIZOR PHILIPS 55PUS7609/12</h3>
-        <p>€427.00</p>
-      </div>
-      </a>
-      <a href="tv12.html">
-      <div class="product">
-        <img src="images/tv12.jpg" alt="TV">
-        <h3>TELEVIZOR LG 55UT80003LA</h3>
-        <p>€445.00</p>
-      </div>
-      </a>
-      <a href="tv13.html">
-      <div class="product">
-        <img src="images/tv13.jpg" alt="TV">
-        <h3>TELEVIZOR PHILIPS 65PUS7000/12</h3>
-        <p>€569.99</p>
-      </div>
-      </a>
-      <a href="tv14.html">
-      <div class="product">
-        <img src="images/tv14.jpg" alt="TV">
-        <h3>TELEVIZOR VIVAX 55Q10C</h3>
-        <p>€510.00</p>
-      </div>
-      </a>
-      <a href="tv15.html">
-      <div class="product">
-        <img src="images/tv15.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE55AU8072U</h3>
-        <p>€569.00</p>
-      </div>
-      </a>
-      <a href="tv16.html">
-      <div class="product">
-        <img src="images/tv16.jpg" alt="TV">
-        <h3>TELEVIZOR VIVAX TV-50UHD123T2S2SM</h3>
-        <p>€430.00</p>
-      </div>
-      </a>
-      <a href="tv17.html">
-      <div class="product">
-        <img src="images/tv14.jpg" alt="TV">
-        <h3>TELEVIZOR VIVAX 50Q10C</h3>
-        <p>€455.00</p>
-      </div>
-      </a>
-      <a href="tv18.html">
-      <div class="product">
-        <img src="images/tv18.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE55BU8072U</h3>
-        <p>€699.00</p>
-      </div>
-      </a>
-      <a href="tv19.html">
-      <div class="product">
-        <img src="images/tv19.png" alt="TV">
-        <h3>TELEVIZOR VIVAX TV49UHDS61T2S2SM</h3>
-        <p>€370.00</p>
-      </div>
-      </a>
-      <a href="tv20.html">
-      <div class="product">
-        <img src="images/tv20.jpg" alt="TV">
-        <h3>TELEVIZOR PHILIPS 65PUS7409/12</h3>
-        <p>€570.00</p>
-      </div>
-      </a>
-      <a href="tv21.html">
-      <div class="product">
-        <img src="images/tv21.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG LED TV-UE55CU7172U</h3>
-        <p>€580.00</p>
-      </div>
-      </a>
-      <a href="tv22.html">
-      <div class="product">
-        <img src="images/tv22.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE55AU7172U</h3>
-        <p>€559.00</p>
-      </div>
-      </a>
-      <a href="tv23.html">
-      <div class="product">
-        <img src="images/tv23.jpg" alt="TV">
-        <h3>TELEVIZOR LG 50UP75003LF</h3>
-        <p>€450.00</p>
-      </div>
-      </a>
-      <a href="tv24.html">
-      <div class="product">
-        <img src="images/tv24.png" alt="TV">
-        <h3>TELEVIZOR PHILIPS 65PUS609/12</h3>
-        <p>€585.00</p>
-      </div>
-      </a>
-      <a href="tv25.html">
-      <div class="product">
-        <img src="images/tv25.jpg" alt="TV">
-        <h3>TELEVIZOR LG 50UR78003LK</h3>
-        <p>€510.00</p>
-      </div>
-      </a>
-      <a href="tv26.html">
-      <div class="product">
-        <img src="images/tv26.jpg" alt="TV">
-        <h3>TELEVIZOR PHILIPS 55PUS7000/12</h3>
-        <p>€429.99</p>
-      </div>
-      </a>
-      <a href="tv27.html">
-      <div class="product">
-        <img src="images/tv27.png" alt="TV">
-        <h3>TELEVIZOR LG 55UT73003LA</h3>
-        <p>€445.00</p>
-      </div>
-      </a>
-      <a href="tv28.html">
-      <div class="product">
-        <img src="images/tv28.png" alt="TV">
-        <h3>TELEVIZOR PHILIPS 75PUS7000/12</h3>
-        <p>€799.00</p>
-      </div>
-      </a>
-      <a href="tv30.html">
-      <div class="product">
-        <img src="images/tv30.jpg" alt="TV">
-        <h3>TELEVIZOR LG 55NANO81T3A</h3>
-        <p>€565.00</p>
-      </div>
-      </a>
-      <a href="tv31.html">
-      <div class="product">
-        <img src="images/tv31.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE75CU7102K</h3>
-        <p>€1100.00</p>
-      </div>
-      </a>
-      <a href="tv32.html">
-      <div class="product">
-        <img src="images/tv32.png" alt="TV">
-        <h3>TELEVIZOR VIVAX 32LE20K</h3>
-        <p>€145.00</p>
-      </div>
-      </a>
-      <a href="tv33.html">
-      <div class="product">
-        <img src="images/tv33.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE43TU7092U</h3>
-        <p>€389.00</p>
-      </div>
-      </a>
-      <a href="tv34.html">
-      <div class="product">
-        <img src="images/tv34.png" alt="TV">
-        <h3>TELEVIZOR VIVAX TV-55UHD123T2S2SM</h3>
-        <p>€490.00</p>
-      </div>
-      </a>
-      <a href="tv35.html">
-      <div class="product">
-        <img src="images/tv35.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE50AU9072U</h3>
-        <p>€610.00</p>
-      </div>
-      </a>
-      <a href="tv36.html">
-      <div class="product">
-        <img src="images/tv36.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG QE65Q60AAU</h3>
-        <p>€1150.00</p>
-      </div>
-      </a>
-      <a href="tv37.html">
-      <div class="product">
-        <img src="images/tv37.png" alt="TV">
-        <h3>TELEVIZOR VIVAX A SERIES 65UHD10K</h3>
-        <p>€589.00</p>
-      </div>
-      </a>
-      <a href="tv38.html">
-      <div class="product">
-        <img src="images/tv38.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG QLED QE50Q60TAU</h3>
-        <p>€749.00</p>
-      </div>
-      </a>
-      <a href="tv39.html">
-      <div class="product">
-        <img src="images/tv39.png" alt="TV">
-        <h3>TELEVIZOR VIVAX IMAGE 43Q10C</h3>
-        <p>€379.00</p>
-      </div>
-      </a>
-      <a href="tv40.html">
-      <div class="product">
-        <img src="images/tv40.avif" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE43BU8072U</h3>
-        <p>€479.00</p>
-      </div>
-      </a>
-      <a href="tv41.html">
-      <div class="product">
-        <img src="images/tv41.webp" alt="TV">
-        <h3>TELEVIZOR PHILIPS LED TV 32PHS6605/12</h3>
-        <p>€220.00</p>
-      </div>
-      </a>
-      <a href="tv42.html">
-      <div class="product">
-        <img src="images/tv42.avif" alt="TV">
-        <h3>TELEVIZOR LG UHD 55UR73003LA</h3>
-        <p>€520.00</p>
-      </div>
-      </a>
-      <a href="tv43.html">
-      <div class="product">
-        <img src="images/tv43.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE58AU7172U</h3>
-        <p>€700.00</p>
-      </div>
-      </a>
-      <a href="tv44.html">
-      <div class="product">
-        <img src="images/tv44.avif" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE50AU8072U</h3>
-        <p>€549.00</p>
-      </div>
-      </a>
-      <a href="tv45.html">
-      <div class="product">
-        <img src="images/tv45.webp" alt="TV">
-        <h3>TELEVIZOR SASMUNG QE65Q65AAU</h3>
-        <p>€1179.00</p>
-      </div>
-      </a>
-      <a href="tv46.html">
-      <div class="product">
-        <img src="images/tv46.avif" alt="TV">
-        <h3>TELEVIZOR SAMSUNG QE55Q60TAU</h3>
-        <p>€.00</p>
-      </div>
-      </a>
-      <a href="tv47.html">
-      <div class="product">
-        <img src="images/tv47.jpg" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE48J5100AWXBT</h3>
-        <p>€520.00</p>
-      </div>
-      </a>
-      <a href="tv48.html">
-      <div class="product">
-        <img src="images/tv48.png" alt="TV">
-        <h3>TELEVIZOR VIVAX B SERIES 40LE20K</h3>
-        <p>€225.00</p>
-      </div>
-      </a>
-      <a href="tv49.html">
-      <div class="product">
-        <img src="images/tv49.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE43CU7092U</h3>
-        <p>€409.99</p>
-      </div>
-      </a>
-      <a href="tv50.html">
-      <div class="product">
-        <img src="images/tv50.avif" alt="TV">
-        <h3>TELEVIZOR SASMUNG LED UE65CU7092U</h3>
-        <p>€695.00</p>
-      </div>
-      </a>
-      <a href="tv51.html">
-      <div class="product">
-        <img src="images/tv51.jpg" alt="TV">
-        <h3>TELEVIZOR SAMSUNG UE65AU7092U</h3>
-        <p>€619.00</p>
-      </div>
-      </a>
-      <a href="tv52.html">
-      <div class="product">
-        <img src="images/tv52.webp" alt="TV">
-        <h3>TELEVIZOR SASMUNG UE43AU7172U</h3>
-        <p>€399.00</p>
-      </div>
-      </a>
-      <a href="tv53.html">
-      <div class="product">
-        <img src="images/tv53.png" alt="TV">
-        <h3>TELEVIZOR VIVAX 40LE113T2S2SM V2</h3>
-        <p>€250.00</p>
-      </div>
-      </a>
-      <a href="tv54.html">
-      <div class="product">
-        <img src="images/tv54.png" alt="TV">
-        <h3>TELEVIZOR VIVAX IMAGO A SERIES 43UHD10K</h3>
-        <p>€275.00</p>
-      </div>
-      </a>
-      <a href="tv55.html">
-      <div class="product">
-        <img src="images/tv55.png" alt="TV">
-        <h3>TELEVIZOR VIVAX TV-43S61T2S2SM</h3>
-        <p>€290.00</p>
-      </div>
-      </a>
-      </div>
-  </section>
-
-
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+<div class="container">
+    <h1 class="page-title">TV</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="tv10.html">
+                <img src="tv10.jpg" alt="TELEVIZOR PHILIPS 50PUS7805/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 50PUS7805/12</h3>
+                    <span class="card-price">€399.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv11.html">
+                <img src="tv11.jpg" alt="TELEVIZOR PHILIPS 55PUS7609/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 55PUS7609/12</h3>
+                    <span class="card-price">€427.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv12.html">
+                <img src="tv12.jpg" alt="TELEVIZOR LG 55UT80003LA" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR LG 55UT80003LA</h3>
+                    <span class="card-price">€445.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv13.html">
+                <img src="tv13.jpg" alt="TELEVIZOR PHILIPS 65PUS7000/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 65PUS7000/12</h3>
+                    <span class="card-price">€569.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv14.html">
+                <img src="tv14.jpg" alt="TELEVIZOR VIVAX 55Q10C" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX 55Q10C</h3>
+                    <span class="card-price">€510.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv15.html">
+                <img src="tv15.jpg" alt="TELEVIZOR SAMSUNG UE55AU8072U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE55AU8072U</h3>
+                    <span class="card-price">€569.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv16.html">
+                <img src="tv16.jpg" alt="TELEVIZOR VIVAX TV-50UHD123T2S2SM" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX TV-50UHD123T2S2SM</h3>
+                    <span class="card-price">€430.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv18.html">
+                <img src="tv18.jpg" alt="TELEVIZOR SASMUNG UE55BU8072U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE55BU8072U</h3>
+                    <span class="card-price">€699.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv19.html">
+                <img src="tv19.png" alt="TELEVIZOR VIVAX TV49UHDS61T2S2SM" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX TV49UHDS61T2S2SM</h3>
+                    <span class="card-price">€370.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv20.html">
+                <img src="tv20.jpg" alt="TELEVIZOR PHILIPS 65PUS7409/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 65PUS7409/12</h3>
+                    <span class="card-price">€570.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv21.html">
+                <img src="tv21.jpg" alt="TELEVIZOR SAMSUNG LED TV-UE55CU7172U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG LED TV-UE55CU7172U</h3>
+                    <span class="card-price">€580.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv22.html">
+                <img src="tv22.jpg" alt="TELEVIZOR SAMSUNG UE55AU7172U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE55AU7172U</h3>
+                    <span class="card-price">€559.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv23.html">
+                <img src="tv23.jpg" alt="TELEVIZOR LG 50UP75003LF" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR LG 50UP75003LF</h3>
+                    <span class="card-price">€450.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv24.html">
+                <img src="tv24.png" alt="TELEVIZOR PHILIPS 65PUS609/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 65PUS609/12</h3>
+                    <span class="card-price">€585.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv25.html">
+                <img src="tv25.jpg" alt="TELEVIZOR LG 50UR78003LK" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR LG 50UR78003LK</h3>
+                    <span class="card-price">€510.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv26.html">
+                <img src="tv26.jpg" alt="TELEVIZOR PHILIPS 55PUS7000/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 55PUS7000/12</h3>
+                    <span class="card-price">€429.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv27.html">
+                <img src="tv27.png" alt="TELEVIZOR LG 55UT73003LA" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR LG 55UT73003LA</h3>
+                    <span class="card-price">€445.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv28.html">
+                <img src="tv28.png" alt="TELEVIZOR PHILIPS 75PUS7000/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS 75PUS7000/12</h3>
+                    <span class="card-price">€799.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv29.html">
+                <img src="tv29.jpg" alt="TELEVIZOR SAMSUNG 65Q60AAU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG 65Q60AAU</h3>
+                    <span class="card-price">€1150.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv30.html">
+                <img src="tv30.jpg" alt="TELEVIZOR LG 55NANO81T3A" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR LG 55NANO81T3A</h3>
+                    <span class="card-price">€565.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv31.html">
+                <img src="tv31.jpg" alt="TELEVIZOR SASMUNG UE75CU7102K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE75CU7102K</h3>
+                    <span class="card-price">€1100.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv32.html">
+                <img src="tv32.png" alt="TELEVIZOR VIVAX 32LE20K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX 32LE20K</h3>
+                    <span class="card-price">€145.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv33.html">
+                <img src="tv33.jpg" alt="TELEVIZOR SASMUNG UE43TU7092U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE43TU7092U</h3>
+                    <span class="card-price">€389.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv34.html">
+                <img src="tv34.png" alt="TELEVIZOR VIVAX TV-55UHD123T2S2SM" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX TV-55UHD123T2S2SM</h3>
+                    <span class="card-price">€490.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv35.html">
+                <img src="tv35.jpg" alt="TELEVIZOR SASMUNG UE50AU9072U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE50AU9072U</h3>
+                    <span class="card-price">€610.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv36.html">
+                <img src="tv36.jpg" alt="TELEVIZOR SASMUNG QE65Q60AAU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG QE65Q60AAU</h3>
+                    <span class="card-price">€1150.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv37.html">
+                <img src="tv37.png" alt="TELEVIZOR VIVAX A SERIES 65UHD10K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX A SERIES 65UHD10K</h3>
+                    <span class="card-price">€589.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv38.html">
+                <img src="tv38.jpg" alt="TELEVIZOR SAMSUNG QLED QE50Q60TAU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG QLED QE50Q60TAU</h3>
+                    <span class="card-price">€749.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv39.html">
+                <img src="tv39.png" alt="TELEVIZOR VIVAX IMAGE 43Q10C" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX IMAGE 43Q10C</h3>
+                    <span class="card-price">€379.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv41.html">
+                <img src="tv41.webp" alt="TELEVIZOR PHILIPS LED TV 32PHS6605/12" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR PHILIPS LED TV 32PHS6605/12</h3>
+                    <span class="card-price">€220.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv43.html">
+                <img src="tv43.jpg" alt="TELEVIZOR SAMSUNG UE58AU7172U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE58AU7172U</h3>
+                    <span class="card-price">€700.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv45.html">
+                <img src="tv45.webp" alt="TELEVIZOR SASMUNG QE65Q65AAU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG QE65Q65AAU</h3>
+                    <span class="card-price">€1179.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv47.html">
+                <img src="tv47.jpg" alt="TELEVIZOR SASMUNG UE48J5100AWXBT" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE48J5100AWXBT</h3>
+                    <span class="card-price">€520.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv48.html">
+                <img src="tv48.png" alt="TELEVIZOR VIVAX B SERIES 40LE20K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX B SERIES 40LE20K</h3>
+                    <span class="card-price">€225.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv49.html">
+                <img src="tv49.jpg" alt="TELEVIZOR SAMSUNG UE43CU7092U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE43CU7092U</h3>
+                    <span class="card-price">€409.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv5.html">
+                <img src="tv5.jpg" alt="TELEVIZOR SAMSUNG LED TV50TU7022KXXH" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG LED TV50TU7022KXXH</h3>
+                    <span class="card-price">€429.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv51.html">
+                <img src="tv51.jpg" alt="TELEVIZOR SAMSUNG UE65AU7092U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE65AU7092U</h3>
+                    <span class="card-price">€619.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv52.html">
+                <img src="tv52.webp" alt="TELEVIZOR SASMUNG UE43AU7172U" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SASMUNG UE43AU7172U</h3>
+                    <span class="card-price">€399.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv53.html">
+                <img src="tv53.png" alt="TELEVIZOR VIVAX 40LE113T2S2SM V2" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX 40LE113T2S2SM V2</h3>
+                    <span class="card-price">€250.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv54.html">
+                <img src="tv54.png" alt="TELEVIZOR VIVAX IMAGO A SERIES 43UHD10K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX IMAGO A SERIES 43UHD10K</h3>
+                    <span class="card-price">€275.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv55.html">
+                <img src="tv55.png" alt="TELEVIZOR VIVAX TV-43S61T2S2SM" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VIVAX TV-43S61T2S2SM</h3>
+                    <span class="card-price">€290.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv6.html">
+                <img src="tv6.jpg" alt="TELEVIZOR VOX LED 43ADW-D1B" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR VOX LED 43ADW-D1B</h3>
+                    <span class="card-price">€399.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv7.html">
+                <img src="tv7.jpg" alt="TELEVIZOR SAMSUNG QE50Q60AAU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG QE50Q60AAU</h3>
+                    <span class="card-price">€530.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv8.html">
+                <img src="tv8.jpg" alt="TELEVZIOR SAMSUNG UE50AU7172DU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVZIOR SAMSUNG UE50AU7172DU</h3>
+                    <span class="card-price">€500.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="tv9.html">
+                <img src="tv9.jpg" alt="TELEVIZOR SAMSUNG UE50TU7022K" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">TELEVIZOR SAMSUNG UE50TU7022K</h3>
+                    <span class="card-price">€429.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>
