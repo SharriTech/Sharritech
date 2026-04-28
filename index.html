@@ -1,423 +1,246 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SharriTech</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharriTech - Elektronikë & Pajisje Shtëpiake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f8f9fa; color: #1a202c; line-height: 1.6; }
+        
+        /* NAVBAR */
+        nav {
+            background: #ffffff;
+            padding: 16px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { font-size: 1.6em; font-weight: 700; color: #0f172a; text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-links a {
+            color: #475569; text-decoration: none; padding: 8px 14px; border-radius: 6px;
+            font-weight: 500; font-size: 0.92em; transition: all 0.25s ease;
+        }
+        .nav-links a:hover { background: #eff6ff; color: #3b82f6; }
+        .nav-links a.active { background: #3b82f6; color: white; }
 
-    /* NAVBAR */
-    nav {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-     
-    }
-    nav a{
-        text-decoration: none;
-    }
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white; padding: 80px 5% 100px; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero::after {
+            content: ''; position: absolute; inset: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/></svg>');
+            opacity: 0.5;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8em; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.5px; }
+        .hero p { font-size: 1.15em; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;
+            font-size: 1em; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary { background: #3b82f6; color: white; box-shadow: 0 4px 14px rgba(59,130,246,0.4); }
+        .btn-primary:hover { background: #2563eb; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.2); }
 
-    /* .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #568BBD;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      
-    }
-    .logo span{
-      color: #6EC8CB;
-    }
-    .logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} */
+        /* CATEGORIES */
+        .categories { max-width: 1300px; margin: 60px auto; padding: 0 5%; }
+        .section-title { text-align: center; font-size: 2.2em; margin-bottom: 40px; color: #0f172a; font-weight: 700; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+        .category-card {
+            background: white; border-radius: 12px; padding: 28px 20px; text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;
+            transition: all 0.3s ease; text-decoration: none; color: inherit;
+        }
+        .category-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+        .cat-icon { font-size: 2.4em; margin-bottom: 16px; color: #3b82f6; }
+        .category-card h3 { font-size: 1.25em; color: #1e293b; margin-bottom: 8px; font-weight: 600; }
+        .category-card p { color: #64748b; font-size: 0.95em; }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
+        /* TRUST BADGES */
+        .trust { background: white; padding: 60px 5%; margin-top: 40px; }
+        .trust-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; text-align: center; }
+        .trust-item i { font-size: 2.2em; color: #3b82f6; margin-bottom: 16px; }
+        .trust-item h4 { font-size: 1.2em; color: #0f172a; margin-bottom: 8px; font-weight: 600; }
+        .trust-item p { color: #475569; font-size: 0.95em; }
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
+        /* FOOTER */
+        footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 40px 5%; margin-top: 80px; }
+        footer p { margin-bottom: 8px; }
+        footer a { color: #60a5fa; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
 
-    .nav-links a:hover {
-      color: #6EC8CB;
-    }
-
-    /* HERO SECTION */
-   /* HERO */
-.hero {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  padding: 30px 20px;
-  background-color: white;
-}
-
-.hero-text {
-  width: 55%;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero-text h2 {
-  font-size: 3.2rem;
-  color: black;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.hero-text h3 {
-  font-size: 1.8rem;
-}
-
-.hero-text span {
-  color: red;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero-text a {
-  padding: 12px 25px;
-  background-color: #0096FF;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid black;
-  text-align: center;
-  width: 45%;
-  font-size: 18px;
-}
-
-.hero-tv {
-  width: 45%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hero-tv img {
-  width: 260px;
-  height: auto;
-  display: block;
-}
-
-    /* PRODUKTET */
-    .products {
-      padding: 60px 40px;
-      text-align: center;
-      background-color: #6EC8CB;
-    }
-    .products a{
-        text-decoration: none;
-        color: black;
-    }
-
-    .products h2 {
-      margin-bottom: 40px;
-      color: white;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .product {
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid black;
-  
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-    .product img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .product h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    .product p {
-      color: #6EC8CB;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .hero {
-    padding: 60px 15px;
-    text-align: center;
-    align-items: center;
-    background-image: none;
-    color: black;
-    background-color:lightblue;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero h2{
-    color: black;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero a {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-.hero {
-    flex-direction: column !important;
-    text-align: center;
-    gap: 15px;
-    background-color: lightblue;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-  .hero-img img,
-  .hero-tv img {
-    display: none;
-  }
-
-  .products {
-    padding: 40px 20px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr; /* one product per row */
-  }
-
-  .product img {
-    height: auto;
-  }
-}
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* --- MOBILE STYLES --- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    border-top: 1px solid #333;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-
-  .nav-links a {
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    color: white;
-    border-bottom: 1px solid #333;
-  }
-
-  .nav-links a:hover {
-    background-color: #333;
-    color: #6EC8CB;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-
-  </style>
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .nav-links { display: none; }
+            .category-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html" class="logo">Sharri<span>Tech</span></a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Kryefaqja</a>
+            <a href="TV.html">TV</a>
+            <a href="Frigorifer.html">Frigorifer</a>
+            <a href="frizat.html">Friz</a>
+            <a href="lavatriqe.html">Lavatriçe</a>
+            <a href="enelarese.html">Enëlarëse</a>
+            <a href="Shporetelektrik.html">Shporet</a>
+            <a href="thithese.html">Thithëse</a>
+            <a href="bojler.html">Bojler</a>
+            <a href="klima.html">Klima</a>
+            <a href="telefon.html">Telefon</a>
+            <a href="tablet.html">Tablet</a>
+            <a href="trotinet.html">Trotinet</a>
+            <a href="kositese.html">Kositese</a>
+            <a href="pllaka.html">Pllaka</a>
+            <a href="smartwatch.html">Smartwatch</a>
+        </div>
+    </nav>
 
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pajisje Elektronike me Cilësi të Lartë</h1>
+            <p>Shpërndarës zyrtar i markave më të njohura. Garanci e plotë, çmime konkurruese dhe dërgesë e shpejtë në të gjithë vendin.</p>
+            <div class="hero-btns">
+                <a href="Frigorifer.html" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Shiko Produktet</a>
+                <a href="#categories" class="btn btn-secondary"><i class="fas fa-th-large"></i> Kategoritë</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
-</nav>
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+        <h2 class="section-title">Kategoritë Tona</h2>
+        <div class="category-grid">
+            <a href="TV.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-tv"></i></div>
+                <h3>Televizorë</h3>
+                <p>4K, QLED & Smart TV</p>
+            </a>
+            <a href="Frigorifer.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Frigoriferë</h3>
+                <p>Të gjitha madhësitë</p>
+            </a>
+            <a href="frizat.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-icicles"></i></div>
+                <h3>Frizera</h3>
+                <p>Ruajtje e gjatë e ushqimit</p>
+            </a>
+            <a href="lavatriqe.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-soap"></i></div>
+                <h3>Lavatriçe</h3>
+                <p>Teknologji e avancuar</p>
+            </a>
+            <a href="enelarese.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Enëlarëse</h3>
+                <p>Kurseni kohë e ujë</p>
+            </a>
+            <a href="Shporetelektrik.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-fire"></i></div>
+                <h3>Shporet</h3>
+                <p>Elektrik & me induksion</p>
+            </a>
+            <a href="thithese.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-wind"></i></div>
+                <h3>Thithëse</h3>
+                <p>Kuzhinë e pastër</p>
+            </a>
+            <a href="bojler.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-tint"></i></div>
+                <h3>Bojlerë</h3>
+                <p>Ujë i ngrohtë gjithmonë</p>
+            </a>
+            <a href="klima.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-fan"></i></div>
+                <h3>Klima</h3>
+                <p>Freski & ngrohtësi</p>
+            </a>
+            <a href="telefon.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Telefonë</h3>
+                <p>Smartphones cilësorë</p>
+            </a>
+            <a href="tablet.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-tablet-alt"></i></div>
+                <h3>Tablet</h3>
+                <p>Samsung & më shumë</p>
+            </a>
+            <a href="trotinet.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-bicycle"></i></div>
+                <h3>Trotinetë</h3>
+                <p>Lëvizje ekologjike</p>
+            </a>
+            <a href="kositese.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-cut"></i></div>
+                <h3>Kositese</h3>
+                <p>Kopë e rregullt gjithmonë</p>
+            </a>
+            <a href="pllaka.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-th"></i></div>
+                <h3>Pllaka</h3>
+                <p>Induksion & qeramike</p>
+            </a>
+            <a href="smartwatch.html" class="category-card">
+                <div class="cat-icon"><i class="fas fa-clock"></i></div>
+                <h3>Smartwatch</h3>
+                <p>Shëndet & stil</p>
+            </a>
+        </div>
+    </section>
 
+    <!-- TRUST BADGES -->
+    <section class="trust">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Garanci e Plotë</h4>
+                <p>2-5 vite garanci zyrtare për çdo produkt</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-truck-fast"></i>
+                <h4>Dërgesë e Shpejtë</h4>
+                <p>Brenda 24-48 orëve në të gjithë vendin</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-tags"></i>
+                <h4>Çmime Konkurruese</h4>
+                <p>Cilësia më e mirë me çmimet më të mira</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-headset"></i>
+                <h4>Mbështetje 24/7</h4>
+                <p>Ekip profesional gati t'ju ndihmojë</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-    <a href="kontakti.html">Na Vizito</a>
-    <h1>Zgjedh Teknikën e Shtëpisë tënde</h1>
-    <p>Frigoriferë, Lavatriçe, Furrat dhe më shumë – me çmimet më të mira</p>
-    <h3>MUNDËSI PAGESE ME KËSTE PËR 3, 6 DHE 12 MUAJ</h3>
-    <h2>ZBRITJE <span>-5%</span></h2>
-  </div>
-     <div class="hero-img">
-    <img src="images/televizori.png" alt="">
-  </div>
-  </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 SharriTech. Të gjitha të drejtat e rezervuara.</p>
+        <p><i class="fas fa-phone"></i> +383 XX XXX XXX | <i class="fas fa-envelope"></i> <a href="mailto:info@sharritech.com">info@sharritech.com</a></p>
+    </footer>
 
-  <!-- PRODUKTET -->
-  <section class="products">
-    <h2>Produktet Kryesore</h2>
-    <a href="tv2.html">
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/philipstv2.png" alt="Lavatriçe">
-        <h3>TELEVIZOR PHILIPS LED 50PUS8009/12</h3>
-        <p>€439.99</p>
-      </div>
-    </a>
-    <a href="frizi6.html">
-      <div class="product">
-        <img src="images/frizi6.png" alt="Frigorifer">
-        <h3>FRIZ WHIRPOOL WHE3183.1</h3>
-        <p>€410.00</p>
-      </div>
-      </a>
-      <a href="furra7.html">
-      <div class="product">
-        <img src="images/furra7.avif" alt="Furrë">
-        <h3>FURRË MONTUESE BASHKË ME PLLAKË VOX SET 2111401</h3>
-        <p>€395.00</p>
-      </div>
-      </a>
-      <a href="lavatriqe15.html">
-      <div class="product">
-        <img src="images/lavatriqe15.jpg" alt="TV">
-        <h3>RROBALARËSE HOTPOINT/ARISTON NLCD 946 BS A EU N 9KG</h3>
-        <p>€560.00</p>
-      </div>
-      </a>
-      <a href="aparatuji.html">
-      <div class="product">
-        <img src="images/aparatuji1.webp" alt="TV">
-        <h3>APARAT UJI BRUNO LM-YL1-1170B Z</h3>
-        <p>€120.00</p>
-      </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-  <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
-
-
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,157 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Enëlarëse - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a class="active" href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
-<section class="products">
-    <div class="product-grid">
-    <a href="enelarese1.html">
-      <div class="product">
-        <img src="images/enelarese1.png" alt="lavatriqe">
-        <h3>ENËLARËSE VIVAX HOME DW-601242B </h3>
-        <p>€275.00</p>
-      </div>
-    </a>
-    <a href="enelarese2.html">
-      <div class="product">
-        <img src="images/enelarese2.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE HOTPOINT/ARISTON HFC2B19</h3>
-        <p>€325.00</p>
-        <h3 id="notinstock">SKA NË STOK</h3>
-      </div>
-    </a>
-    <a href="enelarese3.html">
-      <div class="product">
-        <img src="images/enelarese3.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE DELON VS DW C134PS</h3>
-        <del>€235.00</del>
-        <p>€190.00</p>
-      </div>
-    </a>
-    <a href="enelarese4.html">
-      <div class="product">
-        <img src="images/enelarese4.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE VOX LC12A15-B</h3>
-        <del>€275.00</del>
-        <p>€230.00</p>
-      </div>
-    </a>
-    <a href="enelarese5.html">
-      <div class="product">
-        <img src="images/enelarese5.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE HOTPOINT/ARISTON LFB5B019XEU</h3>
-        <p>€368.00</p>
-      </div>
-    </a>
-    <a href="enelarese6.html">
-      <div class="product">
-        <img src="images/enelarese6.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE ARISTON DFC2B19</h3>
-        <p>€349.00</p>
-      </div>
-    </a>
-    <a href="enelarese7.html">
-      <div class="product">
-        <img src="images/enelarese7.jpg" alt="lavatriqe">
-        <h3>ENËLARËSE MIDEA MFD60SO80W-YK</h3>
-        <p>€280.00</p>
-      </div>
-    </a>
-    <a href="enelarese8.html">
-      <div class="product">
-        <img src="images/enelarese8.png" alt="lavatriqe">
-        <h3>ENËLARËSE VOX LCT8F</h3>
-        <del>€275.00</del>
-        <p>€230.00</p>
-      </div>
-    </a>
-    <a href="enelarese9.html">
-      <div class="product">
-        <img src="images/enelarese9.webp" alt="lavatriqe">
-        <h3>ENËLARËSE MONTUESE ELECTROLUX KESD7100L 911 535 263</h3>
-        <p>€430.00</p>
-      </div>
-    </a>
-    <a href="enelarese10.html">
-      <div class="product">
-        <img src="images/enelarese10.png" alt="lavatriqe">
-        <h3>ENËLARËSE MONTUESE VIVAX HOME DWB-451052B</h3>
-        <p>€315.00</p>
-      </div>
-    </a>
-    <a href="enelarese11.html">
-      <div class="product">
-        <img src="images/enelarese11.png" alt="lavatriqe">
-        <h3>ENËLARËSE MONTUESE VOX GSI6541E</h3>
-        <p>€350.00</p>
-      </div>
-    </a>
-    <a href="enelarese12.html">
-      <div class="product">
-        <img src="images/enelarese12.jpeg" alt="lavatriqe">
-        <h3>ENËLARËSE MONTUESE MIDEA MID60S110.1-YK</h3>
-        <p>€269.00</p>
-        <h3 id="notinstock">SKA NË STOK</h3>
-      </div>
-    </a>
-    <a href="enelarese13.html">
-      <div class="product">
-        <img src="images/enelarese13.png" alt="lavatriqe">
-        <h3>ENËLARËSE MONTUESE VIVAX DWB-601473B</h3>
-        <p>€355.00</p>
-      </div>
-    </a>
-     </div>
-  </section>
 
-
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+<div class="container">
+    <h1 class="page-title">Enëlarëse</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="enelarese1.html">
+                <img src="enelarese1.png" alt="ENËLARËSE VIVAX HOME DW-601242B" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE VIVAX HOME DW-601242B</h3>
+                    <span class="card-price">€275.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese10.html">
+                <img src="enelarese10.png" alt="ENËLARËSE MONTUESE VIVAX HOME DWB-451052B" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MONTUESE VIVAX HOME DWB-451052B</h3>
+                    <span class="card-price">€315.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese11.html">
+                <img src="enelarese11.png" alt="ENËLARËSE MONTUESE VOX GSI6541E" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MONTUESE VOX GSI6541E</h3>
+                    <span class="card-price">€350.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese12.html">
+                <img src="enelarese12.jpeg" alt="ENËLARËSE MONTUESE MIDEA MID60S110.1-YK" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MONTUESE MIDEA MID60S110.1-YK</h3>
+                    <span class="card-price">€269.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese13.html">
+                <img src="enelarese13.png" alt="ENËLARËSE MONTUESE VIVAX DWB-601473B" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MONTUESE VIVAX DWB-601473B</h3>
+                    <span class="card-price">€355.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese2.html">
+                <img src="enelarese2.jpg" alt="ENËLARËSE HOTPOINT/ARISTON HFC2B19" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE HOTPOINT/ARISTON HFC2B19</h3>
+                    <span class="card-price">€325.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese3.html">
+                <img src="enelarese3.jpg" alt="ENËLARËSE DELON VS DW C134PS" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE DELON VS DW C134PS</h3>
+                    <span class="card-price">€235.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese4.html">
+                <img src="enelarese4.jpg" alt="ENËLARËSE VOX LC12A15-B" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE VOX LC12A15-B</h3>
+                    <span class="card-price">€275.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese5.html">
+                <img src="enelarese5.jpg" alt="ENËLARËSE HOTPOINT/ARISTON LFB5B019XEU" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE HOTPOINT/ARISTON LFB5B019XEU</h3>
+                    <span class="card-price">€368.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese6.html">
+                <img src="enelarese6.jpg" alt="ENËLARËSE ARISTON DFC2B19" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE ARISTON DFC2B19</h3>
+                    <span class="card-price">€349.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese7.html">
+                <img src="enelarese7.jpg" alt="ENËLARËSE MIDEA MFD60SO80W-YK" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MIDEA MFD60SO80W-YK</h3>
+                    <span class="card-price">€280.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese8.html">
+                <img src="enelarese8.png" alt="ENËLARËSE VOX LCT8F" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE VOX LCT8F</h3>
+                    <span class="card-price">€275.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="enelarese9.html">
+                <img src="enelarese9.webp" alt="ENËLARËSE MONTUESE ELECTROLUX KESD7100L 911 535 263" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">ENËLARËSE MONTUESE ELECTROLUX KESD7100L 911 535 263</h3>
+                    <span class="card-price">€430.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>

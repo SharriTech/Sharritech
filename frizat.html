@@ -1,168 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Friz - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a class="active" href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="frizi1.html">
-      <div class="product">
-        <img src="images/frizi1.png" alt="lavatriqe">
-        <h3>FRIZ VIVAX CFR143</h3>
-        <p>€195.00</p>
-      </div>
-    </a>
-    <a href="frizi2.html">
-      <div class="product">
-        <img src="images/frizi2.png" alt="lavatriqe">
-        <h3>FRIZ VIVAX CFR-293</h3>
-        <p>€270.00</p>
-      </div>
-    </a>
-    <a href="frizi3.html">
-      <div class="product">
-        <img src="images/frizi3.png" alt="lavatriqe">
-        <h3>FRIZ VIVAX CFR-250</h3>
-        <p>€259.99</p>
-      </div>
-    </a>
-    <a href="frizi4.html">
-      <div class="product">
-        <img src="images/frizi4.jpg" alt="lavatriqe">
-        <h3>FRIZ WHIRPOOL WH1410</h3>
-        <p>€285.00</p>
-      </div>
-    </a>
-    <a href="frizi5.html">
-      <div class="product">
-        <img src="images/frizi5.jpg" alt="lavatriqe">
-        <h3>FRIZ WHIRPOOL WH2010</h3>
-        <p>€357.00</p>
-      </div>
-    </a>
-    <a href="frizi6.html">
-      <div class="product">
-        <img src="images/frizi6.png" alt="lavatriqe">
-        <h3>FRIZ WHIRPOOL WHE3183.1</h3>
-        <p>€410.00</p>
-      </div>
-    </a>
-    <a href="frizi7.html">
-      <div class="product">
-        <img src="images/frizi7.png" alt="lavatriqe">
-        <h3>FRIZ WHIRPOOL WH2010 </h3>
-        <p>€357.00</p>
-      </div>
-    </a>
-    <a href="frizi8.html">
-      <div class="product">
-        <img src="images/frizi8.png" alt="lavatriqe">
-        <h3>FRIZ WHIRLPOOL WHE3933.1 390L</h3>
-        <p>€495.00</p>
-      </div>
-    </a>
-    <a href="frizi9.html">
-      <div class="product">
-        <img src="images/frizi9.png" alt="lavatriqe">
-        <h3>FRIZ VOX BE1-300RL</h3>
-        <del>€399.00</del><p>€350.00</p>
-      </div>
-    </a>
-    <a href="frizi10.html">
-      <div class="product">
-        <img src="images/frizi10.webp" alt="lavatriqe">
-        <h3>FRIZ VOX BE1-400HL</h3>
-        <p>€399.99</p>
-      </div>
-    </a>
-    <a href="frizi11.html">
-      <div class="product">
-        <img src="images/frizi11.png" alt="lavatriqe">
-        <h3>FRIZ VOX BE1-300RL</h3>
-        <p>€345.00</p>
-      </div>
-    </a>
-    <a href="frizi12.html">
-      <div class="product">
-        <img src="images/frizi12.jpg" alt="lavatriqe">
-        <h3>FRIZ MIDEA MDRC280FEE01</h3>
-        <p>€215.00</p>
-      </div>
-    </a>
-    <a href="frizi13.html">
-      <div class="product">
-        <img src="images/frizi13.webp" alt="lavatriqe">
-        <h3>FRIZ MIDEA-MDRC564FZF01 418L</h3>
-        <p>€435.00</p>
-      </div>
-    </a>
-    <a href="frizi14.html">
-      <div class="product">
-        <img src="images/frizi14.jpg" alt="lavatriqe">
-        <h3>FRIZ MIDEA MDRC207FEE01 142L</h3>
-        <p>€185.00</p>
-      </div>
-    </a>
-    <a href="frizi15.html">
-      <div class="product">
-        <img src="images/frizi15.png" alt="lavatriqe">
-        <h3>FRIZ MIDEA MDRC405FEE01 290L</h3>
-        <p>€289.99</p>
-      </div>
-    </a>
-    
-      </div>
-  </section>
-
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+<div class="container">
+    <h1 class="page-title">Friz</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="frizi1.html">
+                <img src="frizi1.png" alt="FRIZ VIVAX CFR143" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ VIVAX CFR143</h3>
+                    <span class="card-price">€195.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi10.html">
+                <img src="frizi10.webp" alt="FRIGORIFER BANAK VOX BE1-400HL" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER BANAK VOX BE1-400HL</h3>
+                    <span class="card-price">€399.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi11.html">
+                <img src="frizi11.png" alt="FRIZ VOX BE1-300RL" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ VOX BE1-300RL</h3>
+                    <span class="card-price">€345.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi12.html">
+                <img src="frizi12.jpg" alt="FRIZ MIDEA MDRC280FEE01" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ MIDEA MDRC280FEE01</h3>
+                    <span class="card-price">€215.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi13.html">
+                <img src="frizi13.webp" alt="FRIZ MIDEA-MDRC564FZF01 418L" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ MIDEA-MDRC564FZF01 418L</h3>
+                    <span class="card-price">€435.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi14.html">
+                <img src="frizi14.jpg" alt="FRIZ MIDEA MDRC207FEE01 142L" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ MIDEA MDRC207FEE01 142L</h3>
+                    <span class="card-price">€185.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi15.html">
+                <img src="frizi15.png" alt="FRIZ MIDEA MDRC405FEE01 290L" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ MIDEA MDRC405FEE01 290L</h3>
+                    <span class="card-price">€289.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi2.html">
+                <img src="frizi2.png" alt="FRIZ VIVAX CFR-293" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ VIVAX CFR-293</h3>
+                    <span class="card-price">€270.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi3.html">
+                <img src="frizi3.png" alt="FRIZ VIVAX CFR-250" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ VIVAX CFR-250</h3>
+                    <span class="card-price">€259.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi4.html">
+                <img src="frizi4.jpg" alt="FRIZ WHIRPOL WH1410" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ WHIRPOL WH1410</h3>
+                    <span class="card-price">€285.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi5.html">
+                <img src="frizi5.jpg" alt="FRIZ WHIRPOOL WH2010" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ WHIRPOOL WH2010</h3>
+                    <span class="card-price">€357.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi6.html">
+                <img src="frizi6.png" alt="FRIZ WHIRPOOL WHE3183.1" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ WHIRPOOL WHE3183.1</h3>
+                    <span class="card-price">€410.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi7.html">
+                <img src="frizi7.png" alt="FRIZ WHIRPOOL WH2010" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ WHIRPOOL WH2010</h3>
+                    <span class="card-price">€357.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi8.html">
+                <img src="frizi8.png" alt="FRIZ WHIRLPOOL WHE3933.1 390L" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ WHIRLPOOL WHE3933.1 390L</h3>
+                    <span class="card-price">€495.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="frizi9.html">
+                <img src="frizi9.png" alt="FRIZ VOX BE1-300RL" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">FRIZ VOX BE1-300RL</h3>
+                    <span class="card-price">€350.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,97 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title><link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Kositese - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a class="active" href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-  <section class="products">
-    <div class="product-grid">
-    <a href="kositese1.html">
-      <div class="product">
-        <img src="images/kositese1.webp" alt="">
-        <h3>KOSITESE BARI OSITS BECKER BENZIN</h3>
-        <p>€260.00</p>
-      </div>
-    </a>
-    <a href="kositese2.html">
-      <div class="product">
-        <img src="images/kositese2.webp" alt="">
-        <h3>KOSITESE BARI BECKER BENZIN 139CC</h3>
-        <p>€220.00</p>
-      </div>
-    </a>
-    <a href="kositese3.html">
-      <div class="product">
-        <img src="images/kositese3.webp" alt="">
-        <h3>KOSITESE ELEKTRIKE BECKER 1600WAT</h3>
-        <p>€110.00</p>
-      </div>
-    </a>
-    <a href="kositese4.html">
-      <div class="product">
-        <img src="images/kositese4.webp" alt="">
-        <h3>KOSITESE ELEKTRIKE BECKER 1400WAT</h3>
-        <p>€69.00</p>
-      </div>
-    </a>
-    <a href="kositese5.html">
-      <div class="product">
-        <img src="images/kositese5.webp" alt="">
-        <h3>KOSITESE BENZIN 1.6KW 41CM</h3>
-        <p>€199.00</p>
-      </div>
-    </a>
-    </div>
-  </section>
-
-
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
-
+<div class="container">
+    <h1 class="page-title">Kositese</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="kositese1.html">
+                <img src="kositese1.webp" alt="KOSITESE BARI OSITS BECKER BENZIN" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">KOSITESE BARI OSITS BECKER BENZIN</h3>
+                    <span class="card-price">€260.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="kositese2.html">
+                <img src="kositese2.webp" alt="KOSITESE BARI BECKER BENZIN 139CC" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">KOSITESE BARI BECKER BENZIN 139CC</h3>
+                    <span class="card-price">€220.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="kositese3.html">
+                <img src="kositese3.webp" alt="KOSITESE ELEKTRIKE BECKER 1600WAT" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">KOSITESE ELEKTRIKE BECKER 1600WAT</h3>
+                    <span class="card-price">€110.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="kositese4.html">
+                <img src="kositese4.webp" alt="KOSITESE ELEKTRIKE BECKER 1400WAT" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">KOSITESE ELEKTRIKE BECKER 1400WAT</h3>
+                    <span class="card-price">€69.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="kositese5.html">
+                <img src="kositese5.webp" alt="KOSITESE BENZIN 1.6KW 41CM" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">KOSITESE BENZIN 1.6KW 41CM</h3>
+                    <span class="card-price">€199.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>

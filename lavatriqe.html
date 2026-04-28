@@ -1,363 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Lavatriçe - SharriTech</title>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; }
+    nav { background: rgba(0,0,0,0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100; }
+    .logo { color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #667eea; background: rgba(255,255,255,0.1); }
+    .container { max-width: 1400px; margin: 40px auto; padding: 20px; }
+    .page-title { text-align: center; color: white; font-size: 2.8em; margin-bottom: 40px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+    .card-img { width: 100%; height: 220px; object-fit: contain; background: #f8f9fa; padding: 20px; box-sizing: border-box; }
+    .card-body { padding: 20px; }
+    .card-title { font-size: 1.1em; color: #2d3748; margin-bottom: 12px; line-height: 1.4; min-height: 55px; }
+    .card-price { color: #667eea; font-weight: bold; font-size: 1.4em; margin-bottom: 15px; display: block; }
+    .card-link { display: inline-block; padding: 10px 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 500; transition: 0.3s; }
+    .card-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(102,126,234,0.4); }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } }
+</style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"><img src="images/LOGOSHARRI.png" width="150px" height="50px" alt=""></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
-
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a class="active" href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
+<nav>
+    <a href="index.html" class="logo">SharriTech</a>
+    <div class="nav-links">
+        <a href="index.html">Kryefaqja</a>
+        <a href="TV.html">TV</a>
+        <a href="Frigorifer.html">Frigorifer</a>
+        <a href="frizat.html">Friz</a>
+        <a href="lavatriqe.html">Lavatriçe</a>
+        <a href="enelarese.html">Enëlarëse</a>
+        <a href="Shporetelektrik.html">Shporet</a>
+        <a href="thithese.html">Thithëse</a>
+                <a href="bojler.html">Bojler</a>
+        <a href="klima.html">Klima</a>
+        <a href="telefon.html">Telefon</a>
+        <a href="trotinet.html">Trotinet</a>
+    </div>
 </nav>
 
-<section class="products">
-    <div class="product-grid">
-    <a href="lavatriqe1.html">
-      <div class="product">
-        <img src="images/lavatriqe1.png" alt="lavatriqe">
-        <h3>RROBATHARËSE VIVAX CDR-0812A 8KG</h3>
-        <p>€280.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe2.html">
-      <div class="product">
-        <img src="images/lavatriqe2.png" alt="lavatriqe">
-        <h3>RROBALARËSE VIVAX WFL-120615B 6KG</h3>
-       <p>€259.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe3.html">
-      <div class="product">
-        <img src="images/lavatriqe3.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW904040CE1 9KG</h3>
-        <p>€470.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe4.html">
-      <div class="product">
-        <img src="images/lavatriqe4.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW90T4040CE1 9KG</h3>
-        <p>€499.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe5.html">
-      <div class="product">
-        <img src="images/lavatriqe5.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
-        <del>€420.00</del>
-        <p>€335.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe6.html">
-      <div class="product">
-        <img src="images/lavatriqe6.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW80T4020EEL1 8KG</h3>
-        <del>€359.00</del>
-        <p>€310.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe7.html">
-      <div class="product">
-        <img src="images/lavatriqe7.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF110W70/W-HR 7KG</h3>
-        <del>€249.99</del>
-        <p>€199.99</p>
-      </div>
-    </a>
-    <a href="lavatriqe8.html">
-      <div class="product">
-        <img src="images/lavatriqe8.png" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF100W80B/W 8KG</h3>
-        <p>€345.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe9.html">
-      <div class="product">
-        <img src="images/lavatriqe9.png" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF200W120WB/W-HR 12KG</h3>
-        <p>€479.99</p>
-      </div>
-    </a>
-    <a href="lavatriqe10.html">
-      <div class="product">
-        <img src="images/lavatriqe10.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF110W90BA10/W-HR 9KG</h3>
-        <p>€349.99</p>
-      </div>
-    </a>
-    <a href="lavatriqe11.html">
-      <div class="product">
-        <img src="images/lavatriqe11.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF110W80BA10/W-HR 8KG</h3>
-        <p>€319.99</p>
-      </div>
-    </a>
-    <a href="lavatriqe12.html">
-      <div class="product">
-        <img src="images/lavatriqe12.png" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF100W60/W 6KG</h3>
-        <p>€279.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe13.html">
-      <div class="product">
-        <img src="images/lavatriqe13.png" alt="lavatriqe">
-        <h3>RROBALARËSE VIVAX WFL-100615BS 6KG</h3>
-        <p>€235.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe14.html">
-      <div class="product">
-        <img src="images/lavatriqe14.png" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT BWE 91496X WSV EE 9KG</h3>
-        <p>€400.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe15.html">
-      <div class="product">
-        <img src="images/lavatriqe15.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE HOTPOINT/ARISTON NLCD 946 BS A EU N 9KG</h3>
-        <p>€560.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe16.html">
-      <div class="product">
-        <img src="images/lavatriqe16.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT EWC 81483 W EU N 8KG</h3>
-        <p>€365.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe17.html">
-      <div class="product">
-        <img src="images/lavatriqe17.jpg" alt="lavatriqe">
-        <h3>RROBATHARËSE VOX TDM-710T 7KG</h3>
-        <p>€349.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe18.html">
-      <div class="product">
-        <img src="images/lavatriqe18.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE HOTPOINT/ARISTON NS702U W E EU 7KG</h3>
-        <p>€379.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe19.html">
-      <div class="product">
-        <img src="images/lavatriqe19.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE HOTPOINT/ARISTON AQD972F 697 EU N 9KG</h3>
-        <p>€590.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe20.html">
-      <div class="product">
-        <img src="images/lavatriqe20.png" alt="lavatriqe">
-        <h3>RROBALARËSE HOTPOINT/ARISTON NM11 945 WS A EU N 9KG</h3>
-        <p>€480.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe21.html">
-      <div class="product">
-        <img src="images/lavatriqe21.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE VIVAX WFL-140812CI 8KG</h3>
-        <del>€349.00</del>
-        <p>€290.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe22.html">
-      <div class="product">
-        <img src="images/lavatriqe22.png" alt="lavatriqe">
-        <h3>RROBALARËSE VIVAX WFL-140712CI 7KG</h3>
-        <del>€285.00</del>
-        <p>€225.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe23.html">
-      <div class="product">
-        <img src="images/lavatriqe23.jpg" alt="lavatriqe">
-        <h3>RROBATHARËSE SAMSUNG DV80T5220AV 8KG</h3>
-        <p>€649.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe24.html">
-      <div class="product">
-        <img src="images/lavatriqe24.png" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT EWSC 61251 W EU N 6KG</h3>
-        <p>€299.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe25.html">
-      <div class="product">
-        <img src="images/lavatriqe25.png" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT BTW B7220P EU N 7KG</h3>
-        <p>€429.99</p>
-      </div>
-    </a>
-    <a href="lavatriqe26.html">
-      <div class="product">
-        <img src="images/lavatriqe26.jpg" alt="lavatriqe">
-        <h3>RROBATHARËSE SAMSUNG DV80TA020DE 8KG</h3>
-        <p>€565.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe27.html">
-      <div class="product">
-        <img src="images/lavatriqe27.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
-        <del>€420.00</del>
-        <p>€335.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe28.html">
-      <div class="product">
-        <img src="images/lavatriqe28.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW70TA026AE1 7KG</h3>
-        <p>€420.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe29.html">
-      <div class="product">
-        <img src="images/lavatriqe29.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW71T301MWW 7KG</h3>
-        <p>€320.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe30.html">
-      <div class="product">
-        <img src="images/lavatriqe30.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT EWC 71252 W EE N 7KG</h3>
-        <p>€289.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe31.html">
-      <div class="product">
-        <img src="images/lavatriqe31.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT IM 762 MY TIME EE 7KG</h3>
-        <p>€310.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe32.html">
-      <div class="product">
-        <img src="images/lavatriqe32.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW70T304MBW 7KG</h3>
-        <del>299.99</del>
-        <p>€250.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe33.html">
-      <div class="product">
-        <img src="images/lavatriqe33.jpeg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT IM 642 MY TIME EE 6KG</h3>
-        <p>€285.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe34.html">
-      <div class="product">
-        <img src="images/lavatriqe34.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT IM 862 MY TIME EE 8KG</h3>
-        <p>€340.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe35.html">
-      <div class="product">
-        <img src="images/lavatriqe35.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW70T4040EE1 7KG</h3>
-        <p>€339.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe36.html">
-      <div class="product">
-        <img src="images/lavatriqe36.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW80T4540AE1LE 8KG</h3>
-        <p>€479.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe37.html">
-      <div class="product">
-        <img src="images/lavatriqe37.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE INDESIT LAVAT IWDE 7105B EU 7KG</h3>
-        <p>€425.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe38.html">
-      <div class="product">
-        <img src="images/lavatriqe38.png" alt="lavatriqe">
-        <h3>RROBALARËSE HUGO H-6100 6KG</h3>
-        <p>€345.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe39.html">
-      <div class="product">
-        <img src="images/lavatriqe39.jpg" alt="lavatriqe">
-        <h3>RROBALARËSE DELON DL6100 A</h3>
-        <p>€245.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe40.html">
-      <div class="product">
-        <img src="images/lavatriqe40.png" alt="lavatriqe">
-        <h3>RROBALARËSE SAMSUNG WW90T4040CE1</h3>
-        <p>€470.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe41.html">
-      <div class="product">
-        <img src="images/lavatriqe41.png" alt="lavatriqe">
-        <h3>RROBALARËSE MIDEA MF100T60B/W-HR</h3>
-        <p>€299.00</p>
-      </div>
-    </a>
-    <a href="lavatriqe42.html">
-      <div class="product">
-        <img src="images/lavatriqe42.png" alt="lavatriqe">
-        <h3>RROBALTHARËSE VOX TDM-815TQ </h3>
-        <p>€310.00</p>
-      </div>
-    </a>
-    </div>
-  </section>
-
-
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+<div class="container">
+    <h1 class="page-title">Lavatriçe</h1>
+    <div class="grid">
+        <div class="card">
+            <a href="lavatriqe1.html">
+                <img src="lavatriqe1.png" alt="RROBATHARËSE VIVAX CDR-0812A 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBATHARËSE VIVAX CDR-0812A 8KG</h3>
+                    <span class="card-price">€280.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe10.html">
+                <img src="lavatriqe10.jpg" alt="RROBALARËSE MIDEA MF110W90BA10/W-HR 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF110W90BA10/W-HR 9KG</h3>
+                    <span class="card-price">€349.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe11.html">
+                <img src="lavatriqe11.jpg" alt="RROBALARËSE MIDEA MF110W80BA10/W-HR 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF110W80BA10/W-HR 8KG</h3>
+                    <span class="card-price">€319.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe12.html">
+                <img src="lavatriqe12.png" alt="RROBALARËSE MIDEA MF100W60/W 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF100W60/W 6KG</h3>
+                    <span class="card-price">€279.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe13.html">
+                <img src="lavatriqe13.png" alt="RROBALARËSE VIVAX WFL-100615BS 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE VIVAX WFL-100615BS 6KG</h3>
+                    <span class="card-price">€235.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe14.html">
+                <img src="lavatriqe14.png" alt="RROBALARËSE INDESIT BWE 91496X WSV EE 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT BWE 91496X WSV EE 9KG</h3>
+                    <span class="card-price">€400.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe15.html">
+                <img src="lavatriqe15.jpg" alt="RROBALARËSE HOTPOINT/ARISTON NLCD 946 BS A EU N 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE HOTPOINT/ARISTON NLCD 946 BS A EU N 9KG</h3>
+                    <span class="card-price">€560.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe16.html">
+                <img src="lavatriqe16.jpg" alt="RROBALARËSE INDESIT EWC 81483 W EU N 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT EWC 81483 W EU N 8KG</h3>
+                    <span class="card-price">€365.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe17.html">
+                <img src="lavatriqe17.jpg" alt="RROBATHARËSE VOX TDM-710T 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBATHARËSE VOX TDM-710T 7KG</h3>
+                    <span class="card-price">€349.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe18.html">
+                <img src="lavatriqe18.jpg" alt="RROBALARËSE HOTPOINT/ARISTON NS702U W E EU 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE HOTPOINT/ARISTON NS702U W E EU 7KG</h3>
+                    <span class="card-price">€379.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe19.html">
+                <img src="lavatriqe19.jpg" alt="RROBALARËSE HOTPOINT/ARISTON AQD972F 697 EU N 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE HOTPOINT/ARISTON AQD972F 697 EU N 9KG</h3>
+                    <span class="card-price">€590.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe2.html">
+                <img src="lavatriqe2.png" alt="RROBALARËSE VIVAX WFL-120615B 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE VIVAX WFL-120615B 6KG</h3>
+                    <span class="card-price">€259.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe20.html">
+                <img src="lavatriqe20.png" alt="RROBALARËSE HOTPOINT/ARISTON NM11 945 WS A EU N 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE HOTPOINT/ARISTON NM11 945 WS A EU N 9KG</h3>
+                    <span class="card-price">€480.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe21.html">
+                <img src="lavatriqe21.jpg" alt="RROBALARËSE VIVAX WFL-140812CI 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE VIVAX WFL-140812CI 8KG</h3>
+                    <span class="card-price">€349.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe22.html">
+                <img src="lavatriqe22.png" alt="RROBALARËSE VIVAX WFL-140712CI 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE VIVAX WFL-140712CI 7KG</h3>
+                    <span class="card-price">€285.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe23.html">
+                <img src="lavatriqe23.jpg" alt="RROBATHARËSE SAMSUNG DV80T5220AV 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBATHARËSE SAMSUNG DV80T5220AV 8KG</h3>
+                    <span class="card-price">€649.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe24.html">
+                <img src="lavatriqe24.png" alt="RROBALARËSE INDESIT EWSC 61251 W EU N 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT EWSC 61251 W EU N 6KG</h3>
+                    <span class="card-price">€299.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe25.html">
+                <img src="lavatriqe25.png" alt="RROBALARËSE INDESIT BTW B7220P EU N 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT BTW B7220P EU N 7KG</h3>
+                    <span class="card-price">€429.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe26.html">
+                <img src="lavatriqe26.jpg" alt="RROBATHARËSE SAMSUNG DV80TA020DE 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBATHARËSE SAMSUNG DV80TA020DE 8KG</h3>
+                    <span class="card-price">€565.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe27.html">
+                <img src="lavatriqe27.jpg" alt="RROBALARËSE SAMSUNG WW90T4020EE1 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
+                    <span class="card-price">€420.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe28.html">
+                <img src="lavatriqe28.jpg" alt="RROBALARËSE SAMSUNG WW70TA026AE1 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW70TA026AE1 7KG</h3>
+                    <span class="card-price">€420.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe29.html">
+                <img src="lavatriqe29.jpg" alt="RROBALARËSE SAMSUNG WW71T301MWW 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW71T301MWW 7KG</h3>
+                    <span class="card-price">€320.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe3.html">
+                <img src="lavatriqe3.jpg" alt="RROBALARËSE SAMSUNG WW904040CE1 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW904040CE1 9KG</h3>
+                    <span class="card-price">€470.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe30.html">
+                <img src="lavatriqe30.jpg" alt="RROBALARËSE INDESIT EWC 71252 W EE N 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT EWC 71252 W EE N 7KG</h3>
+                    <span class="card-price">€289.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe31.html">
+                <img src="lavatriqe31.jpg" alt="RROBALARËSE INDESIT IM 762 MY TIME EE 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT IM 762 MY TIME EE 7KG</h3>
+                    <span class="card-price">€310.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe32.html">
+                <img src="lavatriqe32.jpg" alt="RROBALARËSE SAMSUNG WW70T304MBW 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW70T304MBW 7KG</h3>
+                    <span class="card-price">€299.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe33.html">
+                <img src="lavatriqe33.jpeg" alt="RROBALARËSE INDESIT IM 642 MY TIME EE 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT IM 642 MY TIME EE 6KG</h3>
+                    <span class="card-price">€285.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe34.html">
+                <img src="lavatriqe34.jpg" alt="RROBALARËSE INDESIT IM 862 MY TIME EE 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT IM 862 MY TIME EE 8KG</h3>
+                    <span class="card-price">€340.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe35.html">
+                <img src="lavatriqe35.jpg" alt="RROBALARËSE SAMSUNG WW70T4040EE1 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW70T4040EE1 7KG</h3>
+                    <span class="card-price">€339.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe36.html">
+                <img src="lavatriqe36.jpg" alt="RROBALARËSE SAMSUNG WW80T4540AE1LE 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW80T4540AE1LE 8KG</h3>
+                    <span class="card-price">€479.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe37.html">
+                <img src="lavatriqe37.jpg" alt="RROBALARËSE INDESIT LAVAT IWDE 7105B EU 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE INDESIT LAVAT IWDE 7105B EU 7KG</h3>
+                    <span class="card-price">€425.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe38.html">
+                <img src="lavatriqe38.png" alt="RROBALARËSE HUGO H-6100 6KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE HUGO H-6100 6KG</h3>
+                    <span class="card-price">€345.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe39.html">
+                <img src="lavatriqe39.jpg" alt="RROBALARËSE DELON DL6100 A" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE DELON DL6100 A</h3>
+                    <span class="card-price">€245.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe4.html">
+                <img src="lavatriqe4.jpg" alt="RROBALARËSE SAMSUNG WW90T4040CE1" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW90T4040CE1</h3>
+                    <span class="card-price">€499.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe40.html">
+                <img src="lavatriqe40.png" alt="RROBALARËSE SAMSUNG WW90T4040CE1" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW90T4040CE1</h3>
+                    <span class="card-price">€470.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe41.html">
+                <img src="lavatriqe41.png" alt="RROBALARËSE MIDEA MF100T60B/W-HR" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF100T60B/W-HR</h3>
+                    <span class="card-price">€299.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe42.html">
+                <img src="lavatriqe42.png" alt="RROBALTHARËSE VOX TDM-815TQ" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALTHARËSE VOX TDM-815TQ</h3>
+                    <span class="card-price">€310.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe5.html">
+                <img src="lavatriqe5.jpg" alt="RROBALARËSE SAMSUNG WW90T4020EE1 9KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW90T4020EE1 9KG</h3>
+                    <span class="card-price">€420.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe6.html">
+                <img src="lavatriqe6.jpg" alt="RROBALARËSE SAMSUNG WW80T4020EEL1 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE SAMSUNG WW80T4020EEL1 8KG</h3>
+                    <span class="card-price">€359.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe7.html">
+                <img src="lavatriqe7.jpg" alt="RROBALARËSE MIDEA MF110W70/W-HR 7KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF110W70/W-HR 7KG</h3>
+                    <span class="card-price">€249.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe8.html">
+                <img src="lavatriqe8.png" alt="RROBALARËSE MIDEA MF100W80B/W 8KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF100W80B/W 8KG</h3>
+                    <span class="card-price">€345.00</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="lavatriqe9.html">
+                <img src="lavatriqe9.png" alt="RROBALARËSE MIDEA MF200W120WB/W-HR 12KG" class="card-img" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">RROBALARËSE MIDEA MF200W120WB/W-HR 12KG</h3>
+                    <span class="card-price">€479.99</span>
+                    <span class="card-link">Shiko Produktin →</span>
+                </div>
+            </a>
+        </div></div>
+</div>
+    <script src="js/main.js"></script>
 </body>
 </html>
