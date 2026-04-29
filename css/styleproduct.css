@@ -806,5 +806,33 @@ footer { background: #05080f; color: var(--text-secondary); text-align: center; 
     .exit-content { padding: 30px 20px; margin: 20px; }
 }
 }
+/* FIX FULLSCREEN LAYOUT */
+@media (min-width: 1920px) {
+    .grid { 
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important; 
+        max-width: 1600px !important; 
+    }
+    .card img { max-height: 250px !important; }
+}
 
+@media (min-width: 2560px) {
+    .grid { 
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)) !important; 
+        max-width: 2000px !important; 
+    }
+}
+
+/* FIX IMAGES NOT LOADING ON LISTING PAGE */
+.card img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 150px;
+    background: #0f172a !important;
+}
+
+/* Fallback for broken images */
+.card img[src=""], .card img:not([src]) {
+    display: none !important;
+}
 }
