@@ -2,144 +2,15 @@
 <html lang="sq">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frigorifer - SharriTech</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding-bottom: 50px;
-}
-nav { 
-    background: rgba(0,0,0,0.95); 
-    padding: 20px 40px; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo { 
-    color: white; 
-    font-weight: bold; 
-    font-size: 1.8em; 
-    text-decoration: none; 
-}
-.nav-links { 
-    display: flex; 
-    gap: 10px; 
-    flex-wrap: wrap; 
-}
-.nav-links a { 
-    color: white; 
-    text-decoration: none; 
-    padding: 10px 20px; 
-    border-radius: 8px; 
-    transition: all 0.3s ease; 
-    font-weight: 500; 
-}
-.nav-links a:hover { 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-    transform: translateY(-3px); 
-}
-.nav-links a.active { 
-    background: rgba(255,255,255,0.2); 
-}
-.container { 
-    max-width: 1400px; 
-    margin: 40px auto; 
-    padding: 0 20px; 
-}
-.page-title { 
-    text-align: center; 
-    color: white; 
-    font-size: 3em; 
-    margin-bottom: 40px; 
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3); 
-}
-.grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 30px; 
-}
-.card { 
-    background: white; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-.card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3); 
-}
-.card a { 
-    text-decoration: none; 
-    color: inherit; 
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-.card img { 
-    width: 100%; 
-    height: 250px; 
-    object-fit: contain; 
-    background: #f8f9fa; 
-    padding: 20px; 
-}
-.card-body { 
-    padding: 20px; 
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.card-title { 
-    font-size: 1.1em; 
-    color: #2d3748; 
-    margin-bottom: 15px; 
-    line-height: 1.4; 
-    font-weight: 600; 
-}
-.card-price { 
-    color: #667eea; 
-    font-weight: bold; 
-    font-size: 1.6em; 
-    margin-bottom: 15px; 
-}
-.card-btn { 
-    display: inline-block; 
-    padding: 12px 25px; 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-    color: white; 
-    border-radius: 50px; 
-    font-weight: 600; 
-    transition: all 0.3s ease; 
-    border: none; 
-    cursor: pointer; 
-    text-align: center;
-}
-.card-btn:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 10px 25px rgba(102,126,234,0.4); 
-}
-@media (max-width: 768px) { 
-    .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); } 
-    .page-title { font-size: 2em; }
-}
-</style>
+<link rel="stylesheet" href="css/styleproduct.css">
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">SharriTech</a>
-    <div class="nav-links">
+    <a href="index.html" class="logo">Sharri<span>Tech</span></a>
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
         <a href="index.html">Kryefaqja</a>
         <a href="TV.html">TV</a>
         <a href="Frigorifer.html" class="active">Frigorifer</a>
@@ -159,342 +30,424 @@ nav {
     <h1 class="page-title">Frigorifer</h1>
     <div class="grid">
 
-        <div class="card"><a href="frigo1.html">
-            <img src="frigo1.jpg" alt="FRIGORIFER MIDEA MDRD142FGE01 93L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER MIDEA MDRD142FGE01 93L</h3>
-                <span class="card-price">€145.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo1.html">
+                <img src="frigo1.jpg" alt="FRIGORIFER MIDEA MDRD142FGE01 93L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER MIDEA MDRD142FGE01 93L</h3>
+                    <span class="card-price">€145.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo2.html">
-            <img src="frigo2.jpg" alt="FRIGORIFER VIVAX HLDNJAK TTL-93E 93L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HLDNJAK TTL-93E 93L</h3>
-                <span class="card-price">€139.99</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo2.html">
+                <img src="frigo2.jpg" alt="FRIGORIFER VIVAX HLDNJAK TTL-93E 93L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HLDNJAK TTL-93E 93L</h3>
+                    <span class="card-price">€139.99</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo3.html">
-            <img src="frigo3.jpg" alt="FRIGORIFER VIVAX HOME TTR-93+ 68L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME TTR-93+ 68L</h3>
-                <span class="card-price">€135.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo3.html">
+                <img src="frigo3.jpg" alt="FRIGORIFER VIVAX HOME TTR-93+ 68L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME TTR-93+ 68L</h3>
+                    <span class="card-price">€135.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo4.html">
-            <img src="frigo4.jpg" alt="FRIGORIFER VOX VF1200F">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VOX VF1200F</h3>
-                <span class="card-price">€189.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo4.html">
+                <img src="frigo4.jpg" alt="FRIGORIFER VOX VF1200F">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VOX VF1200F</h3>
+                    <span class="card-price">€189.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo5.html">
-            <img src="frigo5.jpg" alt="FRIGORIFER DELON SD2-27C 171L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER DELON SD2-27C 171L</h3>
-                <span class="card-price">€249.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo5.html">
+                <img src="frigo5.jpg" alt="FRIGORIFER DELON SD2-27C 171L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER DELON SD2-27C 171L</h3>
+                    <span class="card-price">€249.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo6.html">
-            <img src="frigo6.jpg" alt="FRIGORIFER MIDEA MDRD86SLF01 47L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER MIDEA MDRD86SLF01 47L</h3>
-                <span class="card-price">€116.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo6.html">
+                <img src="frigo6.jpg" alt="FRIGORIFER MIDEA MDRD86SLF01 47L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER MIDEA MDRD86SLF01 47L</h3>
+                    <span class="card-price">€116.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo7.html">
-            <img src="frigo7.jpg" alt="FRIGORIFER VIVAX HOME HLDNJAK MF45 43L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME HLDNJAK MF45 43L</h3>
-                <span class="card-price">€120.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo7.html">
+                <img src="frigo7.jpg" alt="FRIGORIFER VIVAX HOME HLDNJAK MF45 43L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME HLDNJAK MF45 43L</h3>
+                    <span class="card-price">€120.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo8.html">
-            <img src="frigo8.jpg" alt="FRIGORIFER INDESIT LI6 S2E W 197L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT LI6 S2E W 197L</h3>
-                <span class="card-price">€345.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo8.html">
+                <img src="frigo8.jpg" alt="FRIGORIFER INDESIT LI6 S2E W 197L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT LI6 S2E W 197L</h3>
+                    <span class="card-price">€345.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo10.html">
-            <img src="frigo10.jpg" alt="FRIGORIFER DELON SD2-27C 171L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER DELON SD2-27C 171L</h3>
-                <span class="card-price">€249.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo10.html">
+                <img src="frigo10.jpg" alt="FRIGORIFER DELON SD2-27C 171L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER DELON SD2-27C 171L</h3>
+                    <span class="card-price">€249.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo11.html">
-            <img src="frigo11.jpg" alt="FRIGORIFER VIVAX HOME HLDNJAK DD207 WH 163L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME HLDNJAK DD207 WH 163L</h3>
-                <span class="card-price">€220.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo11.html">
+                <img src="frigo11.jpg" alt="FRIGORIFER VIVAX HOME HLDNJAK DD207 WH 163L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME HLDNJAK DD207 WH 163L</h3>
+                    <span class="card-price">€220.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo12.html">
-            <img src="frigo12.jpg" alt="FRIGORIFER MIDEA MDRT294FGF02/FGE50 163L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER MIDEA MDRT294FGF02/FGE50 163L</h3>
-                <span class="card-price">€250.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo12.html">
+                <img src="frigo12.jpg" alt="FRIGORIFER MIDEA MDRT294FGF02/FGE50 163L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER MIDEA MDRT294FGF02/FGE50 163L</h3>
+                    <span class="card-price">€250.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo13.html">
-            <img src="frigo13.jpg" alt="FRIGORIFER VIVAX HOME CF-174 LF W 115L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-174 LF W 115L</h3>
-                <span class="card-price">€210.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo13.html">
+                <img src="frigo13.jpg" alt="FRIGORIFER VIVAX HOME CF-174 LF W 115L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-174 LF W 115L</h3>
+                    <span class="card-price">€210.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo14.html">
-            <img src="frigo14.jpg" alt="FRIGORIFER VIVAX HOME VF-157 WH">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME VF-157 WH</h3>
-                <span class="card-price">€219.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo14.html">
+                <img src="frigo14.jpg" alt="FRIGORIFER VIVAX HOME VF-157 WH">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME VF-157 WH</h3>
+                    <span class="card-price">€219.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo15.html">
-            <img src="frigo15.jpg" alt="FRIGORIFER VIVAX HOME CF-174 LF S 115L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-174 LF S 115L</h3>
-                <span class="card-price">€210.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo15.html">
+                <img src="frigo15.jpg" alt="FRIGORIFER VIVAX HOME CF-174 LF S 115L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-174 LF S 115L</h3>
+                    <span class="card-price">€210.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo17.html">
-            <img src="frigo17.jpg" alt="FRIGORIFER DELON SD2-15DS 103L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER DELON SD2-15DS 103L</h3>
-                <span class="card-price">€225.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo17.html">
+                <img src="frigo17.jpg" alt="FRIGORIFER DELON SD2-15DS 103L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER DELON SD2-15DS 103L</h3>
+                    <span class="card-price">€225.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo19.html">
-            <img src="frigo19.jpg" alt="FRIGORIFER INDESIT UI6 1 W.1">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT UI6 1 W.1</h3>
-                <span class="card-price">€455.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo19.html">
+                <img src="frigo19.jpg" alt="FRIGORIFER INDESIT UI6 1 W.1">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT UI6 1 W.1</h3>
+                    <span class="card-price">€455.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo20.html">
-            <img src="frigo20.jpg" alt="FRIGORIFER INDESIT SI6 2W 323L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT SI6 2W 323L</h3>
-                <span class="card-price">€415.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo20.html">
+                <img src="frigo20.jpg" alt="FRIGORIFER INDESIT SI6 2W 323L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT SI6 2W 323L</h3>
+                    <span class="card-price">€415.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo21.html">
-            <img src="frigo21.jpg" alt="FRIGORIFER INDESIT UI8 S.1">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT UI8 S.1</h3>
-                <span class="card-price">€469.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo21.html">
+                <img src="frigo21.jpg" alt="FRIGORIFER INDESIT UI8 S.1">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT UI8 S.1</h3>
+                    <span class="card-price">€469.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo22.html">
-            <img src="frigo22.jpg" alt="FRIGORIFER INDESIT SI6 1S 323L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT SI6 1S 323L</h3>
-                <span class="card-price">€425.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo22.html">
+                <img src="frigo22.jpg" alt="FRIGORIFER INDESIT SI6 1S 323L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT SI6 1S 323L</h3>
+                    <span class="card-price">€425.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo23.html">
-            <img src="frigo23.jpg" alt="FRIGORIFER SAMSUNG RB30J3600SA 205L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER SAMSUNG RB30J3600SA 205L</h3>
-                <span class="card-price">€479.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo23.html">
+                <img src="frigo23.jpg" alt="FRIGORIFER SAMSUNG RB30J3600SA 205L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER SAMSUNG RB30J3600SA 205L</h3>
+                    <span class="card-price">€479.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo24.html">
-            <img src="frigo24.jpg" alt="FRIGORIFER VOX IKK3410E 181L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VOX IKK3410E 181L</h3>
-                <span class="card-price">€399.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo24.html">
+                <img src="frigo24.jpg" alt="FRIGORIFER VOX IKK3410E 181L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VOX IKK3410E 181L</h3>
+                    <span class="card-price">€399.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo25.html">
-            <img src="frigo25.jpg" alt="FRIGORIFER VOX KK3400E 204L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VOX KK3400E 204L</h3>
-                <span class="card-price">€315.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo25.html">
+                <img src="frigo25.jpg" alt="FRIGORIFER VOX KK3400E 204L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VOX KK3400E 204L</h3>
+                    <span class="card-price">€315.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo26.html">
-            <img src="frigo26.jpg" alt="FRIGORIFER VIVAX HOME CF-259LF W 197L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-259LF W 197L</h3>
-                <span class="card-price">€265.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo26.html">
+                <img src="frigo26.jpg" alt="FRIGORIFER VIVAX HOME CF-259LF W 197L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-259LF W 197L</h3>
+                    <span class="card-price">€265.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo27.html">
-            <img src="frigo27.jpg" alt="FRIGORIFER INDESIT LR S1 W 196L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT LR S1 W 196L</h3>
-                <span class="card-price">€350.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo27.html">
+                <img src="frigo27.jpg" alt="FRIGORIFER INDESIT LR S1 W 196L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT LR S1 W 196L</h3>
+                    <span class="card-price">€350.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo28.html">
-            <img src="frigo28.jpg" alt="FRIGORIFER VIVAX HOME CF-310 NFX 224L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-310 NFX 224L</h3>
-                <span class="card-price">€379.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo28.html">
+                <img src="frigo28.jpg" alt="FRIGORIFER VIVAX HOME CF-310 NFX 224L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-310 NFX 224L</h3>
+                    <span class="card-price">€379.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo29.html">
-            <img src="frigo29.jpg" alt="FRIGORIFER VIVAX HOME CF-310D NFX 224L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-310D NFX 224L</h3>
-                <span class="card-price">€409.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo29.html">
+                <img src="frigo29.jpg" alt="FRIGORIFER VIVAX HOME CF-310D NFX 224L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-310D NFX 224L</h3>
+                    <span class="card-price">€409.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo30.html">
-            <img src="frigo30.jpg" alt="FRIGORIFER WHIRPOOL WQ9 E1L (2) 388L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER WHIRPOOL WQ9 E1L (2) 388L</h3>
-                <span class="card-price">€1650.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo30.html">
+                <img src="frigo30.jpg" alt="FRIGORIFER WHIRPOOL WQ9 E1L (2) 388L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER WHIRPOOL WQ9 E1L (2) 388L</h3>
+                    <span class="card-price">€1650.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo31.html">
-            <img src="frigo31.jpg" alt="FRIGORIFER SAMSUNG RB34T602EB1 228L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER SAMSUNG RB34T602EB1 228L</h3>
-                <span class="card-price">€569.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo31.html">
+                <img src="frigo31.jpg" alt="FRIGORIFER SAMSUNG RB34T602EB1 228L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER SAMSUNG RB34T602EB1 228L</h3>
+                    <span class="card-price">€569.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo32.html">
-            <img src="frigo32.jpg" alt="FRIGORIFER SAMSUNG RS68A8531S9 409L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER SAMSUNG RS68A8531S9 409L</h3>
-                <span class="card-price">€1349.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo32.html">
+                <img src="frigo32.jpg" alt="FRIGORIFER SAMSUNG RS68A8531S9 409L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER SAMSUNG RS68A8531S9 409L</h3>
+                    <span class="card-price">€1349.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo33.html">
-            <img src="frigo33.jpg" alt="FRIGORIFER INDESIT RIGO LI8 S2E K1 228L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT RIGO LI8 S2E K1 228L</h3>
-                <span class="card-price">€411.99</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo33.html">
+                <img src="frigo33.jpg" alt="FRIGORIFER INDESIT RIGO LI8 S2E K1 228L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT RIGO LI8 S2E K1 228L</h3>
+                    <span class="card-price">€411.99</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo34.html">
-            <img src="frigo34.jpg" alt="FRIGORIFER INDESIT LI8 S2E S 228L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT LI8 S2E S 228L</h3>
-                <span class="card-price">€400.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo34.html">
+                <img src="frigo34.jpg" alt="FRIGORIFER INDESIT LI8 S2E S 228L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT LI8 S2E S 228L</h3>
+                    <span class="card-price">€400.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo35.html">
-            <img src="frigo35.jpg" alt="FRIGORIFER VIVAX HOME CF-378DNF BG 256L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER VIVAX HOME CF-378DNF BG 256L</h3>
-                <span class="card-price">€600.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo35.html">
+                <img src="frigo35.jpg" alt="FRIGORIFER VIVAX HOME CF-378DNF BG 256L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER VIVAX HOME CF-378DNF BG 256L</h3>
+                    <span class="card-price">€600.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo36.html">
-            <img src="frigo36.jpg" alt="FRIGORIFER SAMSUNG RB34C7B5E12 230L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER SAMSUNG RB34C7B5E12 230L</h3>
-                <span class="card-price">€650.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo36.html">
+                <img src="frigo36.jpg" alt="FRIGORIFER SAMSUNG RB34C7B5E12 230L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER SAMSUNG RB34C7B5E12 230L</h3>
+                    <span class="card-price">€650.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo37.html">
-            <img src="frigo37.jpg" alt="FRIGORIFER INDESIT LI8 S1E S 228L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT LI8 S1E S 228L</h3>
-                <span class="card-price">€400.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo37.html">
+                <img src="frigo37.jpg" alt="FRIGORIFER INDESIT LI8 S1E S 228L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT LI8 S1E S 228L</h3>
+                    <span class="card-price">€400.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo38.html">
-            <img src="frigo38.jpg" alt="FRIGORIFER WHIRPOOL W7X 82L OX 231L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER WHIRPOOL W7X 82L OX 231L</h3>
-                <span class="card-price">€527.99</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo38.html">
+                <img src="frigo38.jpg" alt="FRIGORIFER WHIRPOOL W7X 82L OX 231L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER WHIRPOOL W7X 82L OX 231L</h3>
+                    <span class="card-price">€527.99</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo39.html">
-            <img src="frigo39.jpg" alt="FRIGORIFER WHIRPOOL W84BE 72 X 2 369L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER WHIRPOOL W84BE 72 X 2 369L</h3>
-                <span class="card-price">€1127.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo39.html">
+                <img src="frigo39.jpg" alt="FRIGORIFER WHIRPOOL W84BE 72 X 2 369L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER WHIRPOOL W84BE 72 X 2 369L</h3>
+                    <span class="card-price">€1127.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
-        <div class="card"><a href="frigo40.html">
-            <img src="frigo40.jpg" alt="FRIGORIFER INDESIT LI6 S2E X 197L">
-            <div class="card-body">
-                <h3 class="card-title">FRIGORIFER INDESIT LI6 S2E X 197L</h3>
-                <span class="card-price">€345.00</span>
-                <button class="card-btn">Shiko Produktin →</button>
-            </div>
-        </a></div>
+        <div class="card">
+            <a href="frigo40.html">
+                <img src="frigo40.jpg" alt="FRIGORIFER INDESIT LI6 S2E X 197L">
+                <div class="card-body">
+                    <h3 class="card-title">FRIGORIFER INDESIT LI6 S2E X 197L</h3>
+                    <span class="card-price">€345.00</span>
+                    <button class="card-btn">Shiko Produktin →</button>
+                </div>
+            </a>
+        </div>
 
     </div>
 </div>
 
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById("menuToggle");
+    navLinks.classList.toggle("show");
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+}
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
