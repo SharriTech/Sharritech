@@ -1,80 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SharriTech</title>
+    <title>FRIGORIFER INDESIT LI6 S2E X 197L - SharriTech</title>
     <link rel="stylesheet" href="css/styleproduct.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html"></a>
-  <!-- <a href="index.html" class="logo">Sharri<span>Tech</span></a> -->
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html" class="logo">Sharri<span>Tech</span></a>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="TV.html">TV</a>
+            <a class="active" href="Frigorifer.html">Frigorifer</a>
+            <a href="frizat.html">Friz</a>
+            <a href="lavatriqe.html">Lavatriçe</a>
+            <a href="enelarese.html">Enëlarëse</a>
+            <a href="Shporetelektrik.html">Shporet</a>
+            <a href="thithese.html">Thithëse</a>
+            <a href="bojler.html">Bojler</a>
+            <a href="klima.html">Klima</a>
+            <a href="telefon.html">Telefon</a>
+            <a href="tablet.html">Tablet</a>
+            <a href="trotinet.html">Trotinet</a>
+            <a href="kositese.html">Kositese</a>
+        </div>
+    </nav>
 
-   
-  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
-
-  <!-- Nav links -->
-  <div class="nav-links" id="navLinks">
-    <a href="TV.html">TV</a>
-    <a class="active" href="Frigorifer.html">Frigorifer</a>
-    <a href="frizat.html">Friz</a>
-    <a href="lavatriqe.html">Lavatriçe</a>
-    <a href="enelarese.html">Enëlarëse</a>
-    <a href="Shporetelektrik.html">Shporet elektrik</a>
-    <a href="thithese.html">Thithëse elektrike</a>
-    <a href="mikroval.html">Mikrovalë</a>
-    <a href="bojler.html">Bojler</a>
-    <a href="klima.html">Klima</a>
-    <a href="telefon.html">Telefon/Tablet</a>
-    <a href="trotinet.html">Trotinet Elektrik</a>
-    <a href="kositese.html">Kositese</a>
-    
-  </div>
-</nav>
-
+    <!-- PRODUCT DETAIL -->
     <div class="product-detail">
-  <div class="product-image">
-    <img src="frigo40.jpg" alt="" loading="lazy">
-    
-  </div>
-  <div class="product-info">
-    <h2>FRIGORIFER INDESIT LI6 S2E X 197L</h2>
-    <ul>
-      
-      <li>Garancioni:2 Vite</li>
-      <li>Barkodi:8050147673096</li>
-      <li>Cmimi: <span class="price">€345.00</span></li>
-    </ul>
-    <!-- <a href="#" class="buy-btn">Buy Now</a> -->
-  </div>
-</div>
+        <div class="product-image">
+            <img src="frigo40.jpg" alt="FRIGORIFER INDESIT LI6 S2E X 197L" loading="lazy">
+        </div>
+        <div class="product-info">
+            <h2>FRIGORIFER INDESIT LI6 S2E X 197L</h2>
+            <ul>
+                <li><strong>Garancioni:</strong> 2 Vite</li>
+                <li><strong>Barkodi:</strong> <code>8050147673096</code></li>
+                <li><strong>Çmimi:</strong> <span class="price">€345.00</span></li>
+            </ul>
+            <a href="https://wa.me/383XXXXXXXXX?text=Përshëndetje, jam i interesuar për FRIGORIFER INDESIT LI6 S2E X 197L" class="buy-btn">
+                <i class="fab fa-whatsapp"></i> Porosit tani
+            </a>
+        </div>
+    </div>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>©SharriTech. Të gjitha të drejtat e rezervuara.</p>
+        <p><i class="fas fa-phone"></i> +383 XX XXX XXX | <i class="fas fa-envelope"></i> info@sharritech.com</p>
+    </footer>
 
-<!-- FOOTER -->
-  <footer>
-    ©SharriTech.
-  </footer>
-
-
-
-
-
-<script>
-  function toggleMenu() {
-<img src="frigo40.jpg" alt="function toggleMenu() {" style="max-width:100%; height:auto; margin:15px 0; display:block;">
-
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.getElementById("menuToggle");
-
-    navLinks.classList.toggle("show");
-
-    // Toggle icon
-    menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
-  }
-</script>
+    <!-- JAVASCRIPT - CLEAN & FIXED -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            const menuToggle = document.getElementById("menuToggle");
+            navLinks.classList.toggle("show");
+            menuToggle.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+        }
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
